@@ -1,4 +1,4 @@
-//This is intercepting FES websocket for live connection, instead of the need of auto-refresh every 30 seconds!
+//This is intercepting FES websocket for live connection (DO NOT EDIT UNLESS YOU KNOW WHAT YOU ARE DOING)
 
 (function() {
     'use strict';

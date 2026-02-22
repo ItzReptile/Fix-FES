@@ -1,3 +1,4 @@
+//////////////////CONFIGURATION///////////////////////////////////////////////////////////////////
 const CONFIG = {
     font: {
         family: "'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif",
@@ -136,7 +137,7 @@ const CONFIG = {
     emptyState: { color: 'rgba(155, 190, 240, 0.36)' },
     intervals: { ticketRefresh: 30000, assignmentRefresh: 30000, messageRefresh: 8000, messagesPerPage: 30 },
 }
-
+// end of CONFIG, rest of the code is logic and UI related to the extension's functionality (DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU ARE DOING)
 const MODULE_MAP = {
     'Module 2':             { ids: [39] },
     'Module 4':             { ids: [40, 41] },
