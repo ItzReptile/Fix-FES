@@ -3,9 +3,23 @@
   "name": "Fix FES",
   "version": "1.0",
   "content_scripts": [{
-    "matches": ["https://app.fesinstitute.com/dashboard/fes/admin/tickets"],
+    "matches": [
+      "https://app.fesinstitute.com/dashboard/fes/admin/tickets*",
+      "https://beta.fesinstitute.com/dashboard/fes/program*"
+    ],
     "css": ["styles.css"],
     "js": ["content.js"],
-    "run_at": "document_idle"
-  }]
+       "run_at": "document_start",
+    "world": "MAIN"
+  },
+   {
+    "matches": [
+      "https://app.fesinstitute.com/*",
+      "https://beta.fesinstitute.com/*"
+    ],
+    "js": ["fes-ws-hook.js"],
+    "run_at": "document_start",
+    "world": "MAIN"
+  }
+]
 }
