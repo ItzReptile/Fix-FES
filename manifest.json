@@ -7,7 +7,7 @@
       "https://app.fesinstitute.com/dashboard/fes/admin/tickets*",
       "https://beta.fesinstitute.com/dashboard/fes/program*"
     ],
-    "css": ["styles.css"],
+ 
     "js": ["content.js"],
        "run_at": "document_start",
     "world": "MAIN"
