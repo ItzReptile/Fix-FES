@@ -5,100 +5,100 @@ const CONFIG = {
         importUrl: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap',
     },
     background: {
-        image: 'https://images8.alphacoders.com/135/thumb-1920-1354384.png',
-        overlay: 'rgba(14, 10, 38, 0.58)',
-        solidColor: '#0e0a26',
+        image: 'https://images5.alphacoders.com/557/thumb-1920-557948.jpg',
+        overlay: 'rgba(18, 14, 12, 0.72)', 
+        solidColor: '#12100e',
     },
     layout: { leftWidth: '20%', centerWidth: '60%', rightWidth: '20%', navbarHeight: '48px' },
     cards: {
-        background: 'rgba(28, 18, 58, 0.72)',
-        backgroundHover: 'rgba(42, 26, 82, 0.88)',
-        backgroundActive: 'rgba(0, 185, 240, 0.13)',
-        border: 'rgba(0, 195, 255, 0.14)',
-        borderHover: 'rgba(0, 195, 255, 0.28)',
-        borderActive: 'rgba(0, 195, 255, 0.50)',
-        shadow: '0 2px 12px rgba(0, 175, 230, 0.12)',
+        background: 'rgba(38, 32, 28, 0.78)',
+        backgroundHover: 'rgba(55, 45, 38, 0.90)',
+        backgroundActive: 'rgba(180, 30, 30, 0.12)',
+        border: 'rgba(160, 120, 90, 0.18)',       
+        borderHover: 'rgba(180, 30, 30, 0.30)',      
+        borderActive: 'rgba(180, 30, 30, 0.55)',
+        shadow: '0 2px 12px rgba(0, 0, 0, 0.35)',
         blur: '12px', borderRadius: '8px',
     },
     columns: {
-        background: 'rgba(14, 10, 38, 0.68)',
-        headerBackground: 'rgba(24, 16, 52, 0.90)',
+        background: 'rgba(16, 13, 11, 0.75)',
+        headerBackground: 'rgba(28, 22, 18, 0.92)',
         blur: '14px',
     },
     navbar: {
-        background: 'rgba(12, 8, 30, 0.90)',
+        background: 'rgba(12, 10, 8, 0.94)',
         blur: '14px',
-        border: 'rgba(0, 195, 255, 0.12)',
-        linkColor: 'rgba(175, 210, 255, 0.60)',
-        linkHoverColor: '#cce8ff',
-        linkActiveColor: '#cce8ff',
-        linkActiveBg: 'rgba(0, 195, 255, 0.12)',
+        border: 'rgba(180, 30, 30, 0.20)',          
+        linkColor: 'rgba(210, 190, 170, 0.60)',
+        linkHoverColor: '#e8d8c8',
+        linkActiveColor: '#e8d8c8',
+        linkActiveBg: 'rgba(180, 30, 30, 0.15)',
     },
     tabs: {
-        activeColor: '#7ee8fa',
-        inactiveColor: 'rgba(175, 210, 255, 0.42)',
-        underlineColor: '#7ee8fa',
-        hoverBg: 'rgba(0, 195, 255, 0.07)',
+        activeColor: '#c8a882',                      
+        inactiveColor: 'rgba(200, 170, 140, 0.40)',
+        underlineColor: '#b41e1e',                  
+        hoverBg: 'rgba(180, 30, 30, 0.08)',
     },
     text: {
-        primary: '#eaf4ff',
-        secondary: 'rgba(215, 238, 255, 0.88)',
-        muted: 'rgba(175, 210, 255, 0.55)',
-        veryMuted: 'rgba(155, 190, 240, 0.35)',
-        link: '#7ee8fa',
+        primary: '#f0e6d8',                          
+        secondary: 'rgba(230, 210, 185, 0.88)',
+        muted: 'rgba(200, 175, 148, 0.55)',
+        veryMuted: 'rgba(180, 155, 125, 0.35)',
+        link: '#c8a882',
     },
     avatar: {
-        border: 'rgba(0, 195, 255, 0.20)',
+        border: 'rgba(180, 30, 30, 0.25)',
         borderWidth: '2px',
-        fallbackBg: 'rgba(126, 232, 250, 0.18)',
-        fallbackColor: '#eaf4ff',
+        fallbackBg: 'rgba(180, 30, 30, 0.20)',
+        fallbackColor: '#f0e6d8',
         size: '32px', sizeSmall: '24px', sizeLarge: '36px',
         borderRadius: '9999px',
     },
     buttons: {
-        background: 'rgba(0, 195, 255, 0.09)',
-        backgroundHover: 'rgba(0, 195, 255, 0.19)',
-        border: 'rgba(0, 195, 255, 0.18)',
-        borderHover: 'rgba(0, 195, 255, 0.34)',
-        text: '#cce8ff',
+        background: 'rgba(180, 30, 30, 0.10)',
+        backgroundHover: 'rgba(180, 30, 30, 0.22)',
+        border: 'rgba(180, 30, 30, 0.22)',
+        borderHover: 'rgba(180, 30, 30, 0.40)',
+        text: '#e8d0b8',
         borderRadius: '6px',
     },
     messageBox: {
-        background: 'rgba(18, 12, 44, 0.32)',
-        border: 'rgba(0, 195, 255, 0.10)',
+        background: 'rgba(20, 16, 12, 0.35)',
+        border: 'rgba(160, 120, 90, 0.14)',
         maxChars: 80,
     },
     chat: {
-        background: 'rgba(14, 10, 38, 0.74)',
-        headerBackground: 'rgba(22, 15, 50, 0.92)',
+        background: 'rgba(16, 13, 11, 0.78)',
+        headerBackground: 'rgba(24, 18, 14, 0.94)',
         headerBlur: '12px',
-        messageBubbleMentor: 'rgba(0, 175, 230, 0.16)',
-        messageBubbleStudent: 'rgba(210, 50, 160, 0.13)',
+        messageBubbleMentor: 'rgba(180, 30, 30, 0.14)',    
+        messageBubbleStudent: 'rgba(100, 80, 60, 0.18)',    
         messageBubbleBorderRadius: '12px',
-        messageHoverBg: 'rgba(0, 195, 255, 0.06)',
-        inputBackground: 'rgba(12, 8, 30, 0.92)',
-        inputBorder: 'rgba(0, 195, 255, 0.16)',
-        inputFocusBorder: 'rgba(126, 232, 250, 0.48)',
-        inputPlaceholder: 'rgba(155, 190, 240, 0.35)',
-        timestampColor: 'rgba(155, 190, 240, 0.35)',
-        codeBlockBackground: 'rgba(22, 15, 50, 0.55)',
-        codeBlockBorder: 'rgba(0, 195, 255, 0.14)',
-        loadMoreBackground: 'rgba(0, 195, 255, 0.08)',
-        loadMoreBorder: 'rgba(0, 195, 255, 0.16)',
+        messageHoverBg: 'rgba(180, 30, 30, 0.06)',
+        inputBackground: 'rgba(10, 8, 6, 0.94)',
+        inputBorder: 'rgba(160, 120, 90, 0.18)',
+        inputFocusBorder: 'rgba(180, 30, 30, 0.50)',
+        inputPlaceholder: 'rgba(180, 155, 125, 0.35)',
+        timestampColor: 'rgba(180, 155, 125, 0.35)',
+        codeBlockBackground: 'rgba(24, 18, 14, 0.60)',
+        codeBlockBorder: 'rgba(160, 120, 90, 0.16)',
+        loadMoreBackground: 'rgba(180, 30, 30, 0.10)',
+        loadMoreBorder: 'rgba(180, 30, 30, 0.20)',
         imageMaxWidth: '360px', imageBorderRadius: '8px',
     },
     toolbar: {
-        background: 'rgba(18, 12, 44, 0.28)',
-        buttonColor: 'rgba(175, 210, 255, 0.42)',
-        buttonHoverColor: '#cce8ff',
-        buttonHoverBg: 'rgba(0, 195, 255, 0.10)',
-        buttonActiveColor: '#7ee8fa',
-        dividerColor: 'rgba(0, 195, 255, 0.13)',
+        background: 'rgba(20, 16, 12, 0.30)',
+        buttonColor: 'rgba(200, 170, 140, 0.42)',
+        buttonHoverColor: '#e8d0b8',
+        buttonHoverBg: 'rgba(180, 30, 30, 0.12)',
+        buttonActiveColor: '#b41e1e',
+        dividerColor: 'rgba(160, 120, 90, 0.16)',
     },
     sendButton: {
-        background: 'rgba(126, 232, 250, 0.80)',
-        backgroundHover: 'rgba(126, 232, 250, 1)',
-        color: '#08061a',
+        background: 'rgba(180, 30, 30, 0.85)',      
+        backgroundHover: 'rgba(180, 30, 30, 1)',
+        color: '#f0e6d8',
         borderRadius: '8px',
     },
     actionButtons: {
@@ -106,38 +106,38 @@ const CONFIG = {
         leaveBg: 'rgba(239, 68, 68, 0.14)', leaveBorder: 'rgba(239, 68, 68, 0.38)', leaveColor: '#f87171', leaveHoverBg: 'rgba(239, 68, 68, 0.28)',
     },
     modal: {
-        overlayBg: 'rgba(10, 7, 26, 0.90)',
-        background: 'rgba(22, 15, 50, 0.98)',
-        border: 'rgba(0, 195, 255, 0.16)',
+        overlayBg: 'rgba(8, 6, 4, 0.92)',
+        background: 'rgba(24, 18, 14, 0.98)',
+        border: 'rgba(180, 30, 30, 0.20)',
         borderRadius: '12px',
-        optionBg: 'rgba(0, 195, 255, 0.06)',
-        optionBorder: 'rgba(0, 195, 255, 0.16)',
-        optionHoverBg: 'rgba(0, 195, 255, 0.16)',
-        optionHoverBorder: 'rgba(126, 232, 250, 0.48)',
+        optionBg: 'rgba(180, 30, 30, 0.07)',
+        optionBorder: 'rgba(180, 30, 30, 0.18)',
+        optionHoverBg: 'rgba(180, 30, 30, 0.18)',
+        optionHoverBorder: 'rgba(180, 30, 30, 0.50)',
         successBg: 'rgba(34, 197, 94, 0.15)', successColor: '#4ade80',
         errorBg: 'rgba(239, 68, 68, 0.15)', errorColor: '#f87171',
     },
     assignments: {
-        cardBackground: 'rgba(28, 18, 58, 0.72)',
-        cardBorder: 'rgba(0, 195, 255, 0.14)',
-        cardBorderHover: 'rgba(0, 195, 255, 0.30)',
-        linkColor: '#7ee8fa',
-        approveBg: 'rgba(126, 232, 250, 0.80)',
-        approveHoverBg: 'rgba(126, 232, 250, 1)',
-        deleteBg: '#ef4444', deleteHoverBg: '#dc2626',
+        cardBackground: 'rgba(38, 32, 28, 0.78)',
+        cardBorder: 'rgba(160, 120, 90, 0.18)',
+        cardBorderHover: 'rgba(180, 30, 30, 0.35)',
+        linkColor: '#c8a882',
+        approveBg: 'rgba(180, 30, 30, 0.85)',
+        approveHoverBg: 'rgba(180, 30, 30, 1)',
+        deleteBg: '#7a1a1a', deleteHoverBg: '#5a0e0e',
     },
     scrollbar: {
         width: '6px', trackBackground: 'transparent',
-        thumbBackground: 'rgba(0, 195, 255, 0.14)',
-        thumbHoverBackground: 'rgba(0, 195, 255, 0.28)',
+        thumbBackground: 'rgba(180, 30, 30, 0.16)',
+        thumbHoverBackground: 'rgba(180, 30, 30, 0.30)',
         borderRadius: '3px',
     },
-    badge: { background: '#d63aa0', color: '#fff', fontSize: '0.6rem' },
-    dividers: { color: 'rgba(0, 195, 255, 0.11)' },
-    emptyState: { color: 'rgba(155, 190, 240, 0.36)' },
+    badge: { background: '#b41e1e', color: '#f0e6d8', fontSize: '0.6rem' },
+    dividers: { color: 'rgba(160, 120, 90, 0.14)' },
+    emptyState: { color: 'rgba(180, 155, 125, 0.36)' },
     intervals: { ticketRefresh: 30000, assignmentRefresh: 30000, messageRefresh: 8000, messagesPerPage: 30 },
 }
-// end of CONFIG, rest of the code is logic and UI related to the extension's functionality (DO NOT EDIT BELOW UNLESS YOU KNOW WHAT YOU ARE DOING)
+// end of CONFIG — do not edit below unless you know what you are doing
 const MODULE_MAP = {
     'Module 2':             { ids: [39] },
     'Module 4':             { ids: [40, 41] },
@@ -146,6 +146,7 @@ const MODULE_MAP = {
     'Advanced Internship':  { ids: [56] },
     'Skinstric':            { ids: [47] },
 };
+
 function pageContextInterceptor() {
     const _origFetch = window.fetch;
     window.fetch = async function(...args) {
@@ -172,12 +173,46 @@ function pageContextInterceptor() {
             try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/tickets?type=${type}&offset=0&limit=20`, { headers: { 'Authorization': `Bearer ${token}` } }); const d = await r.json(); if (d?.items) window.dispatchEvent(new CustomEvent('fes-tickets-data', { detail: { type, items: d.items, total: d.total||d.count||0 } })); } catch(e) {}
         }
     };
+
+    window.__fesWsDeleteReaction = function(reactionId, messageId, channelId, userAuthId) {
+        return window.__fesWsEmit?.('events', { type: 'reaction_delete', data: { id: reactionId, message_id: messageId, channel_id: channelId, user_auth_id: userAuthId } }) ?? false;
+    };
+
+    window.__fesWsSendReaction = function(messageId, channelId, reaction, userAuthId) {
+        return window.__fesWsEmit?.('events', { type: 'reaction', data: { message_id: messageId, reaction, user_auth_id: userAuthId, channel_id: channelId } }) ?? false;
+    };
+
+    window.__fesWsEditMessage = async function(messageId, channelId, newHtml) {
+        const authId = window.Clerk?.session?.user?.id || '';
+        const payload = { type: 'message_edit', data: { message_id: messageId, channel_id: channelId, message_content: newHtml, auth_id: authId, channel_type: 'default' } };
+        console.log('[FES EDIT] attempting edit', payload);
+        const sock = window.__fesWsInstance;
+        console.log('[FES EDIT] socket state:', sock ? sock.readyState : 'no instance');
+        const ok = window.__fesWsEmit?.('events', payload) ?? false;
+        console.log('[FES EDIT] emitted:', ok);
+        return ok;
+    };
+
+    window.__fesApproveAssignment = async function(assignmentId) {
+        const token = await getToken(); if (!token) return false;
+        try {
+            const r = await _origFetch(`https://backend-preview.fesinstitute.com/assignments/approve/${assignmentId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${token}` } });
+            window.dispatchEvent(new CustomEvent('fes-assignment-approved', { detail: { id: assignmentId, ok: r.ok } }));
+            return r.ok;
+        } catch(e) { return false; }
+    };
+
     window.__fesFetchMessages = async function(channelId, offset, limit, append) {
         const token = await getToken(); if (!token) return;
         try { const now = new Date().toISOString(); const r = await _origFetch(`https://backend-preview.fesinstitute.com/messages/program/fes/channel/${channelId}?offset=${offset||0}&limit=${limit||30}&start_from=${now}&with_history=true`, { headers: { 'Authorization': `Bearer ${token}` } }); const d = await r.json(); if (d?.items) window.dispatchEvent(new CustomEvent('fes-messages-data', { detail: { channelId, items: d.items, total: d.total||d.count||0, offset: offset||0, append: !!append } })); } catch(e) {}
     };
+
     window.__fesSendMessage = async function(channelId, messageHtml, imageUrls) {
         const token = await getToken(); if (!token) return false;
+        const attachments = (imageUrls || []).map(url => ({ asset_type: 'image', attachment_name: url.split('/').pop().split('?')[0] || 'image.png', url }));
+        const payload = { type: 'message', data: { channel_id: channelId, message: messageHtml || '', program_unique_name: 'fes', send_as_id: null, is_nurture: false, is_feedback_request: false, is_project_feedback: false, attachments } };
+        const emitted = window.__fesWsEmit?.('events', payload);
+        if (emitted) { window.dispatchEvent(new CustomEvent('fes-message-sent', { detail: { ok: true, channelId } })); return true; }
         try {
             let html = messageHtml || '';
             if (imageUrls?.length) imageUrls.forEach(url => { html += `<img src="${url}" />`; });
@@ -186,6 +221,7 @@ function pageContextInterceptor() {
             return false;
         } catch(e) { return false; }
     };
+
     window.__fesUploadImage = async function(base64Data, fileName, mimeType) {
         const token = await getToken(); if (!token) return null;
         try {
@@ -198,22 +234,27 @@ function pageContextInterceptor() {
             return `data:${mimeType};base64,${base64Data}`;
         } catch(e) { return `data:${mimeType};base64,${base64Data}`; }
     };
+
     window.__fesTicketSolved = async function(ticketId) {
         const token = await getToken(); if (!token) return false;
         try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/tickets/solved/${ticketId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${token}` } }); window.dispatchEvent(new CustomEvent('fes-ticket-action', { detail: { action:'solved', ticketId, ok:r.ok } })); return r.ok; } catch(e) { return false; }
     };
+
     window.__fesTicketLeave = async function(ticketId) {
         const token = await getToken(); if (!token) return false;
         try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/tickets/leave/${ticketId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${token}` } }); window.dispatchEvent(new CustomEvent('fes-ticket-action', { detail: { action:'leave', ticketId, ok:r.ok } })); return r.ok; } catch(e) { return false; }
     };
+
     window.__fesAssignTicket = async function(ticketId) {
         const token = await getToken(); if (!token) return false;
         try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/tickets/join/${ticketId}`, { method: 'POST', headers: { 'Authorization': `Bearer ${token}` } }); window.dispatchEvent(new CustomEvent('fes-ticket-assigned', { detail: { ticketId, ok: r.ok } })); return r.ok; } catch(e) { return false; }
     };
+
     window.__fesFetchAssignments = async function(offset, limit, search) {
         const token = await getToken(); if (!token) return;
         try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/assignments/program/fes/all?offset=${offset||0}&limit=${limit||10}&search=${encodeURIComponent(search||'')}`, { headers: { 'Authorization': `Bearer ${token}` } }); const d = await r.json(); if (d?.items) window.dispatchEvent(new CustomEvent('fes-assignments-data', { detail: { items: d.items, total: d.total||d.count||0, offset: offset||0 } })); } catch(e) {}
     };
+
     window.__fesFetchAssignmentCount = async function() {
         const token = await getToken(); if (!token) return;
         try { const r = await _origFetch(`https://backend-preview.fesinstitute.com/assignments/program/fes/count`, { headers: { 'Authorization': `Bearer ${token}` } }); const d = await r.json(); if (d?.count !== undefined) window.dispatchEvent(new CustomEvent('fes-assignment-count', { detail: { count: d.count } })); } catch(e) {}
@@ -224,10 +265,7 @@ function pageContextInterceptor() {
         const results = [];
         for (const mid of moduleIds) {
             try {
-                const r = await _origFetch(`https://backend-preview.fesinstitute.com/module-access/program/fes/module/${mid}`, {
-                    method: 'POST', headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ user_auth_id: userAuthId })
-                });
+                const r = await _origFetch(`https://backend-preview.fesinstitute.com/module-access/program/fes/module/${mid}`, { method: 'POST', headers: { 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ user_auth_id: userAuthId }) });
                 results.push({ mid, ok: r.ok, status: r.status });
             } catch(e) { results.push({ mid, ok: false, error: e.message }); }
         }
@@ -252,7 +290,6 @@ function pageContextInterceptor() {
             return r.ok;
         } catch(e) { return false; }
     };
-
 }
 
 function injectPageContext() { const s = document.createElement('script'); s.textContent = '(' + pageContextInterceptor.toString() + ')();'; (document.head||document.documentElement).appendChild(s); s.remove(); }
@@ -276,18 +313,53 @@ window.addEventListener('fes-ws-event', e => {
             triggerRefresh();
             break;
         case 'message':
-
             if (data?.channel_id) {
-                if (String(data.channel_id) === String(activeChannelId)) {
-                    triggerFetchMessages(data.channel_id);
-                } else {
-                    triggerRefresh();
-                }
+                if (String(data.channel_id) === String(activeChannelId)) triggerFetchMessages(data.channel_id);
+                else triggerRefresh();
             }
             break;
         case 'assignment_submitted':
             triggerFetchAssignments(0, 10, '');
             triggerFetchAssignmentCount();
+            break;
+        case 'reaction_delete':
+            if (data?.message_id && data?.id) {
+                const pill = document.querySelector(`.fes-reaction-pill[data-reaction-id="${data.id}"]`);
+                if (pill) {
+                    const count = pill.querySelector('.fes-reaction-count');
+                    const newCount = parseInt(count.textContent) - 1;
+                    if (newCount <= 0) pill.remove(); else count.textContent = newCount;
+                }
+            }
+            break;
+        case 'reaction':
+            if (data?.message_id && data?.reaction) {
+                const container = document.querySelector(`.fes-reactions[data-msg-id="${data.message_id}"]`);
+                if (container) {
+                    const existing = [...container.querySelectorAll('.fes-reaction-pill')].find(p => p.dataset.reaction === data.reaction);
+                    if (existing) {
+                        const count = existing.querySelector('.fes-reaction-count');
+                        count.textContent = parseInt(count.textContent) + 1;
+                    } else {
+                        const pill = document.createElement('div');
+                        pill.className = 'fes-reaction-pill';
+                        pill.dataset.reaction = data.reaction;
+                        pill.dataset.reactionId = data.id;
+                        pill.dataset.userAuthId = data.user_auth_id;
+                        pill.style.cssText = `display:flex;align-items:center;gap:3px;padding:2px 7px;border-radius:10px;background:${CONFIG.cards.background};border:1px solid ${CONFIG.dividers.color};font-size:12px;cursor:pointer;`;
+                        pill.innerHTML = `${data.reaction}<span class="fes-reaction-count" style="font-size:10px;color:${CONFIG.text.muted};">1</span>`;
+                        pill.addEventListener('click', () => {
+                            const rid = pill.dataset.reactionId;
+                            const uid = pill.dataset.userAuthId;
+                            injectCall(`if(window.__fesWsDeleteReaction) window.__fesWsDeleteReaction(${rid}, ${data.message_id}, ${data.channel_id}, '${uid}');`);
+                            const count = pill.querySelector('.fes-reaction-count');
+                            const newCount = parseInt(count.textContent) - 1;
+                            if (newCount <= 0) pill.remove(); else count.textContent = newCount;
+                        });
+                        container.appendChild(pill);
+                    }
+                }
+            }
             break;
         default:
             break;
@@ -296,19 +368,11 @@ window.addEventListener('fes-ws-event', e => {
 
 window.addEventListener('fes-ws-connected', () => {
     const ind = document.getElementById('fes-ws-indicator');
-    if (ind) {
-        ind.title = 'Real-time: WebSocket connected ✓';
-        ind.style.background = '#4ade80';
-        ind.style.animation = 'none';
-    }
+    if (ind) { ind.title = 'Real-time: WebSocket connected ✓'; ind.style.background = '#4ade80'; ind.style.animation = 'none'; }
 });
 window.addEventListener('fes-ws-disconnected', () => {
     const ind = document.getElementById('fes-ws-indicator');
-    if (ind) {
-        ind.title = 'Polling every 30s (WS disconnected)';
-        ind.style.background = '#f59e0b';
-        ind.style.animation = 'fes-pulse 2s infinite';
-    }
+    if (ind) { ind.title = 'Polling every 30s (WS disconnected)'; ind.style.background = '#f59e0b'; ind.style.animation = 'fes-pulse 2s infinite'; }
 });
 
 window.addEventListener('fes-tickets-data', e => {
@@ -322,9 +386,7 @@ window.addEventListener('fes-tickets-data', e => {
 });
 window.addEventListener('fes-messages-data', e => {
     const { channelId, items, total, offset, append } = e.detail; if (!channelId || !items) return;
-
     const prev = messagesCache[channelId];
-
     if (append && prev) {
         const existing = prev.items; const ids = new Set(existing.map(m=>m.id));
         const newItems = items.filter(m=>!ids.has(m.id));
@@ -335,19 +397,14 @@ window.addEventListener('fes-messages-data', e => {
         const old = prev?.items || [];
         const merged = [...items];
         old.forEach(m => { if (!merged.find(n=>n.id===m.id)) merged.push(m); });
-
         const prevIds = (prev?.items || []).map(m=>m.id).sort().join(',');
         const nextIds = merged.map(m=>m.id).sort().join(',');
         const prevMax = prev?.items?.length ? Math.max(...prev.items.map(m=>m.id)) : 0;
         const nextMax = merged.length ? Math.max(...merged.map(m=>m.id)) : 0;
-
-        if (prev?.items?.length && prevIds === nextIds && prevMax === nextMax) { return; }
+        if (prev?.items?.length && prevIds === nextIds && prevMax === nextMax) return;
         messagesCache[channelId] = { items: merged, total };
     }
-
-    if (String(channelId) === String(activeChannelId)) {
-        renderChatMessages(channelId, messagesCache[channelId].items, append);
-    }
+    if (String(channelId) === String(activeChannelId)) renderChatMessages(channelId, messagesCache[channelId].items, append);
 });
 window.addEventListener('fes-assignments-data', e => {
     const { items, total, offset } = e.detail;
@@ -364,9 +421,8 @@ function injectCall(code) { const s = document.createElement('script'); s.textCo
 function triggerRefresh() { injectCall('if(window.__fesRefreshTickets) window.__fesRefreshTickets();'); }
 function triggerFetchMessages(c, o, l, a) { injectCall(`if(window.__fesFetchMessages) window.__fesFetchMessages(${c}, ${o||0}, ${l||CONFIG.intervals.messagesPerPage}, ${!!a});`); }
 function triggerSendMessage(c, h, imgs) { injectCall(`(async()=>{ await window.__fesSendMessage(${c}, ${JSON.stringify(h)}, ${JSON.stringify(imgs||[])}); })();`); }
-function triggerUploadAndSend(c, h, images) {
-    injectCall(`(async()=>{ const imgs=${JSON.stringify(images)}; const urls=[]; for(const img of imgs){const u=await window.__fesUploadImage(img.base64,img.name,img.mime);if(u)urls.push(u);} await window.__fesSendMessage(${c},${JSON.stringify(h)},urls); })();`);
-}
+function triggerUploadAndSend(c, h, images) { injectCall(`(async()=>{ const imgs=${JSON.stringify(images)}; const urls=[]; for(const img of imgs){const u=await window.__fesUploadImage(img.base64,img.name,img.mime);if(u)urls.push(u);} await window.__fesSendMessage(${c},${JSON.stringify(h)},urls); })();`); }
+function triggerApproveAssignment(id) { injectCall(`if(window.__fesApproveAssignment) window.__fesApproveAssignment(${id});`); }
 function triggerFetchAssignments(o, l, s) { injectCall(`if(window.__fesFetchAssignments) window.__fesFetchAssignments(${o||0}, ${l||10}, ${JSON.stringify(s||'')});`); }
 function triggerFetchAssignmentCount() { injectCall(`if(window.__fesFetchAssignmentCount) window.__fesFetchAssignmentCount();`); }
 function triggerTicketSolved(id) { injectCall(`if(window.__fesTicketSolved) window.__fesTicketSolved(${id});`); }
@@ -398,30 +454,18 @@ function getTicketTimestamp(ticket) {
     const lastMsg = ticket.last_message;
     const role = lastMsg?.users?.role;
     const isStudentLast = lastMsg && !['mentor','moderator','admin'].includes(role);
-
-    if (isStudentLast) {
-
-        const ms = new Date(lastMsg.created_at).getTime();
-        return isNaN(ms) ? 0 : ms;
-    }
-
+    if (isStudentLast) { const ms = new Date(lastMsg.created_at).getTime(); return isNaN(ms) ? 0 : ms; }
     return Number.MAX_SAFE_INTEGER;
 }
 
-function sortTicketsByWait(tickets) {
-    return [...tickets].sort((a, b) => getTicketTimestamp(a) - getTicketTimestamp(b));
-
-}
+function sortTicketsByWait(tickets) { return [...tickets].sort((a, b) => getTicketTimestamp(a) - getTicketTimestamp(b)); }
 
 function makeTicketCard(ticket, source) {
     const student = ticket.student||{}, lastMsg = ticket.last_message||{}, channel = ticket.channel||{};
-    const unread = ticket.unread_count||0, assignees = ticket.ticketsAssignees||ticket.tickets_assignees||[];
+    const unread = ticket.unread_count||0;
     const name = student.display_name||'Unknown', imgUrl = student.image_url||'';
     const channelName = channel.channel_name||'';
     const msgText = lastMsg.message ? trimText(stripHtml(lastMsg.message), CONFIG.messageBox.maxChars) : 'No messages';
-    const msgTime = timeAgo(lastMsg.created_at);
-
- 
     const lastRole = lastMsg?.users?.role || '';
     const lastIsStudent = lastMsg && !['mentor','moderator','admin'].includes(lastRole);
     const lastMsgMs = lastMsg?.created_at ? new Date(lastMsg.created_at).getTime() : 0;
@@ -433,10 +477,8 @@ function makeTicketCard(ticket, source) {
     else if (waitMins < 60) waitLabel = `${waitMins}m wait`;
     else if (waitMins < 1440) waitLabel = `${Math.floor(waitMins/60)}h wait`;
     else waitLabel = `${Math.floor(waitMins/1440)}d wait`;
-
     const lastSenderImg = lastMsg.users?.image_url||'', lastSenderName = lastMsg.users?.display_name||'';
     const isActive = activeTicketId === ticket.id;
-
     const card = document.createElement('div');
     card.className = 'fes-card'; card.dataset.ticketId = ticket.id; card.dataset.studentName = name; card.dataset.channelId = ticket.channel_id||''; card.dataset.source = source;
     const bg = isActive ? CONFIG.cards.backgroundActive : CONFIG.cards.background;
@@ -472,11 +514,9 @@ function makeAssignmentCard(student) {
     const userAuthId = student.auth_id || '';
     const assignments = (student.assignments||[]).filter(a => !a.has_been_reviewed);
     if (assignments.length === 0) return null;
-
     const card = document.createElement('div');
     card.className = 'fes-card';
     card.style.cssText = `border-radius:${CONFIG.cards.borderRadius};border:1px solid ${CONFIG.assignments.cardBorder};background:${CONFIG.assignments.cardBackground};backdrop-filter:blur(${CONFIG.cards.blur});transition:all 0.15s;margin-bottom:6px;overflow:hidden;`;
-
     let assignHtml = '';
     assignments.forEach(a => {
         const submitted = timeAgo(a.created_at);
@@ -498,7 +538,6 @@ function makeAssignmentCard(student) {
             </div>
         </div>`;
     });
-
     card.innerHTML = `<div style="padding:10px 12px;">
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:2px;">
             ${makeAvatar(imgUrl, name, CONFIG.avatar.size)}
@@ -509,10 +548,8 @@ function makeAssignmentCard(student) {
         </div>
         ${assignHtml}
     </div>`;
-
     card.addEventListener('mouseenter', () => { card.style.borderColor = CONFIG.assignments.cardBorderHover; });
     card.addEventListener('mouseleave', () => { card.style.borderColor = CONFIG.assignments.cardBorder; });
-
     card.querySelectorAll('.fes-approve-btn').forEach(btn => {
         btn.addEventListener('mouseenter', () => { btn.style.background = CONFIG.assignments.approveHoverBg; });
         btn.addEventListener('mouseleave', () => { btn.style.background = CONFIG.assignments.approveBg; });
@@ -523,7 +560,6 @@ function makeAssignmentCard(student) {
         btn.addEventListener('mouseleave', () => { btn.style.background = CONFIG.assignments.deleteBg; });
         btn.addEventListener('click', e => { e.stopPropagation(); showDeleteModal(btn.dataset.assignmentId, btn.dataset.userAuth, btn.dataset.studentName); });
     });
-
     return card;
 }
 
@@ -533,7 +569,6 @@ function showApproveModal(assignmentId, userAuthId, studentName) {
     const overlay = document.createElement('div');
     overlay.id = 'fes-modal-overlay';
     overlay.style.cssText = `position:fixed;inset:0;background:${M.overlayBg};display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(4px);font-family:${CONFIG.font.family};`;
-
     const moduleNames = Object.keys(MODULE_MAP);
     let optionsHtml = moduleNames.map(name => {
         const hasIds = MODULE_MAP[name].ids.length > 0;
@@ -541,8 +576,7 @@ function showApproveModal(assignmentId, userAuthId, studentName) {
             ${name}${!hasIds ? ' <span style="font-size:11px;color:'+CONFIG.text.veryMuted+';">(coming soon)</span>' : ''}
         </button>`;
     }).join('');
-
-            overlay.innerHTML = `<div style="background:${M.background};border:1px solid ${M.border};border-radius:${M.borderRadius};width:440px;max-width:90%;max-height:85vh;overflow-y:auto;padding:24px;">
+    overlay.innerHTML = `<div style="background:${M.background};border:1px solid ${M.border};border-radius:${M.borderRadius};width:440px;max-width:90%;max-height:85vh;overflow-y:auto;padding:24px;">
         <h2 style="margin:0 0 4px;font-size:16px;font-weight:600;color:${CONFIG.text.primary};">Approve Assignment</h2>
         <p style="margin:0 0 16px;font-size:13px;color:${CONFIG.text.muted};">Which final project is this? Upon click, it will unlock the next modules accordingly for <strong>${studentName}</strong>.</p>
         <div id="module-options">${optionsHtml}</div>
@@ -551,39 +585,30 @@ function showApproveModal(assignmentId, userAuthId, studentName) {
             <button id="modal-cancel" style="padding:7px 14px;background:transparent;border:1px solid rgba(255,255,255,0.12);color:#fff;border-radius:6px;cursor:pointer;font-size:13px;font-family:inherit;">Cancel</button>
         </div>
     </div>`;
-
     document.body.appendChild(overlay);
     document.getElementById('modal-cancel').onclick = removeModal;
     overlay.onclick = e => { if (e.target === overlay) removeModal(); };
-
     overlay.querySelectorAll('.fes-module-opt').forEach(btn => {
         const name = btn.dataset.module;
         const ids = MODULE_MAP[name]?.ids || [];
         if (ids.length === 0) return;
-
         btn.addEventListener('mouseenter', () => { btn.style.background = M.optionHoverBg; btn.style.borderColor = M.optionHoverBorder; });
         btn.addEventListener('mouseleave', () => { btn.style.background = M.optionBg; btn.style.borderColor = M.optionBorder; });
-
         btn.addEventListener('click', () => {
             overlay.querySelectorAll('.fes-module-opt').forEach(b => { b.disabled = true; b.style.opacity = '0.4'; b.style.cursor = 'wait'; });
             const status = document.getElementById('approve-status');
-            status.style.display = 'block';
-            status.style.background = 'rgba(255,255,255,0.05)';
-            status.style.color = CONFIG.text.secondary;
+            status.style.display = 'block'; status.style.background = 'rgba(255,255,255,0.05)'; status.style.color = CONFIG.text.secondary;
             status.textContent = `Unlocking ${name} (${ids.length} module${ids.length>1?'s':''})...`;
-
             const handler = e => {
                 window.removeEventListener('fes-module-unlock-result', handler);
                 const { results } = e.detail;
                 const allOk = results.every(r => r.ok);
                 if (allOk) {
-                    status.style.background = M.successBg;
-                    status.style.color = M.successColor;
+                    status.style.background = M.successBg; status.style.color = M.successColor;
                     status.textContent = `✓ ${name} unlocked successfully for ${studentName}!`;
                     setTimeout(() => { removeModal(); triggerFetchAssignments(0, 10, ''); triggerFetchAssignmentCount(); }, 1500);
                 } else {
-                    status.style.background = M.errorBg;
-                    status.style.color = M.errorColor;
+                    status.style.background = M.errorBg; status.style.color = M.errorColor;
                     const failed = results.filter(r => !r.ok);
                     status.textContent = `✕ ${failed.length} module(s) failed. Check console.`;
                     overlay.querySelectorAll('.fes-module-opt').forEach(b => { b.disabled = false; b.style.opacity = '1'; b.style.cursor = 'pointer'; });
@@ -591,6 +616,7 @@ function showApproveModal(assignmentId, userAuthId, studentName) {
             };
             window.addEventListener('fes-module-unlock-result', handler);
             triggerUnlockModules(ids, userAuthId);
+            triggerApproveAssignment(parseInt(assignmentId));
         });
     });
 }
@@ -601,7 +627,6 @@ function showDeleteModal(assignmentId, userAuthId, studentName) {
     const overlay = document.createElement('div');
     overlay.id = 'fes-modal-overlay';
     overlay.style.cssText = `position:fixed;inset:0;background:${M.overlayBg};display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(4px);font-family:${CONFIG.font.family};`;
-
     overlay.innerHTML = `<div style="background:${M.background};border:1px solid ${M.border};border-radius:${M.borderRadius};width:480px;max-width:90%;padding:24px;">
         <h2 style="margin:0 0 4px;font-size:16px;font-weight:600;color:${CONFIG.text.primary};">Delete Assignment</h2>
         <p style="margin:0 0 16px;font-size:13px;color:${CONFIG.text.muted};">Deleting assignment for <strong>${studentName}</strong>. Provide a reason — this will be sent as a message in their channel. You can also attach images.</p>
@@ -618,72 +643,45 @@ function showDeleteModal(assignmentId, userAuthId, studentName) {
             <button id="modal-delete-confirm" style="padding:7px 14px;background:${CONFIG.assignments.deleteBg};color:#fff;border:none;border-radius:6px;cursor:pointer;font-size:13px;font-weight:500;font-family:inherit;transition:background 0.15s;">Delete & Notify</button>
         </div>
     </div>`;
-
     document.body.appendChild(overlay);
     document.getElementById('modal-cancel').onclick = removeModal;
     overlay.onclick = e => { if (e.target === overlay) removeModal(); };
-
     const confirmBtn = document.getElementById('modal-delete-confirm');
     confirmBtn.addEventListener('mouseenter', () => { confirmBtn.style.background = CONFIG.assignments.deleteHoverBg; });
     confirmBtn.addEventListener('mouseleave', () => { confirmBtn.style.background = CONFIG.assignments.deleteBg; });
-
     document.getElementById('delete-reason').focus();
-
     let deleteImages = [];
-
     function updateDeleteImagePreview() {
-        const wrap = document.getElementById('delete-image-preview');
-        if (!wrap) return;
+        const wrap = document.getElementById('delete-image-preview'); if (!wrap) return;
         if (deleteImages.length === 0) { wrap.style.display = 'none'; wrap.innerHTML = ''; return; }
         wrap.style.display = 'flex'; wrap.innerHTML = '';
         deleteImages.forEach((img, idx) => {
             const d = document.createElement('div');
             d.style.cssText = 'position:relative;display:inline-block;flex-shrink:0;margin-right:8px;';
-            d.innerHTML = `<img src="${img.dataUrl}" style="height:60px;border-radius:6px;border:1px solid ${CONFIG.dividers.color};object-fit:cover;">
-                <button data-idx="${idx}" style="position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:9999px;background:${CONFIG.assignments.deleteBg};color:#fff;border:none;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;line-height:1;">×</button>`;
+            d.innerHTML = `<img src="${img.dataUrl}" style="height:60px;border-radius:6px;border:1px solid ${CONFIG.dividers.color};object-fit:cover;"><button data-idx="${idx}" style="position:absolute;top:-4px;right:-4px;width:18px;height:18px;border-radius:9999px;background:${CONFIG.assignments.deleteBg};color:#fff;border:none;cursor:pointer;font-size:11px;display:flex;align-items:center;justify-content:center;line-height:1;">×</button>`;
             d.querySelector('button').addEventListener('click', () => { deleteImages.splice(idx, 1); updateDeleteImagePreview(); });
             wrap.appendChild(d);
         });
     }
-
     document.getElementById('delete-attach-btn').onclick = () => { document.getElementById('delete-file-input').click(); };
     document.getElementById('delete-file-input').addEventListener('change', e => {
         const files = e.target.files; if (!files) return;
-        for (const file of files) {
-            if (file.type.startsWith('image/')) {
-                const r = new FileReader();
-                r.onload = ev => { deleteImages.push({ file, dataUrl: ev.target.result, base64: ev.target.result.split(',')[1], name: file.name, mime: file.type }); updateDeleteImagePreview(); };
-                r.readAsDataURL(file);
-            }
-        }
+        for (const file of files) { if (file.type.startsWith('image/')) { const r = new FileReader(); r.onload = ev => { deleteImages.push({ file, dataUrl: ev.target.result, base64: ev.target.result.split(',')[1], name: file.name, mime: file.type }); updateDeleteImagePreview(); }; r.readAsDataURL(file); } }
         e.target.value = '';
     });
-
     document.getElementById('delete-reason').addEventListener('paste', e => {
         const items = e.clipboardData?.items; if (!items) return;
-        for (const item of items) {
-            if (item.type.startsWith('image/')) {
-                e.preventDefault();
-                const file = item.getAsFile();
-                if (file) { const r = new FileReader(); r.onload = ev => { deleteImages.push({ file, dataUrl: ev.target.result, base64: ev.target.result.split(',')[1], name: file.name, mime: file.type }); updateDeleteImagePreview(); }; r.readAsDataURL(file); }
-            }
-        }
+        for (const item of items) { if (item.type.startsWith('image/')) { e.preventDefault(); const file = item.getAsFile(); if (file) { const r = new FileReader(); r.onload = ev => { deleteImages.push({ file, dataUrl: ev.target.result, base64: ev.target.result.split(',')[1], name: file.name, mime: file.type }); updateDeleteImagePreview(); }; r.readAsDataURL(file); } } }
     });
-
     confirmBtn.addEventListener('click', async () => {
         const reason = document.getElementById('delete-reason').value.trim();
         if (!reason && deleteImages.length === 0) { document.getElementById('delete-reason').style.borderColor = '#ef4444'; return; }
         confirmBtn.disabled = true; confirmBtn.textContent = 'Deleting...';
         const status = document.getElementById('delete-status');
-
         let channelId = null;
         const allTickets = [...ticketsCache.my, ...ticketsCache.other, ...ticketsCache.unassigned];
-        for (const t of allTickets) {
-            if (t.student?.auth_id === userAuthId || t.student?.display_name === studentName) { channelId = t.channel_id; break; }
-        }
-
+        for (const t of allTickets) { if (t.student?.auth_id === userAuthId || t.student?.display_name === studentName) { channelId = t.channel_id; break; } }
         triggerDeleteAssignment(parseInt(assignmentId));
-
         if (channelId) {
             let html = '';
             if (reason) html += `<p><strong>Assignment Feedback:</strong></p><p>${reason.replace(/\n/g, '</p><p>')}</p>`;
@@ -709,7 +707,6 @@ function handleTicketClick(ticket, source) {
     const name = student.display_name||'Unknown', imgUrl = student.image_url||'';
     activeTicketId = ticket.id; activeChannelId = channelId; activeTicketSource = source; activeTicketData = ticket; pendingImages = [];
     populateColumns();
-
     const chatHeader = document.getElementById('chat-header');
     if (chatHeader) {
         chatHeader.style.display = 'flex';
@@ -726,16 +723,16 @@ function handleTicketClick(ticket, source) {
         document.getElementById('btn-solved')?.addEventListener('click', () => { if (confirm(`Mark ticket #${ticket.id} as solved?`)) triggerTicketSolved(ticket.id); });
         document.getElementById('btn-leave')?.addEventListener('click', () => { if (confirm(`Leave ticket #${ticket.id}?`)) triggerTicketLeave(ticket.id); });
         document.getElementById('btn-open-original')?.addEventListener('click', () => openOriginalTicket(name));
-        const AB2 = CONFIG.actionButtons;
-        document.getElementById('btn-solved')?.addEventListener('mouseenter', function(){this.style.background=AB2.solvedHoverBg;});
-        document.getElementById('btn-solved')?.addEventListener('mouseleave', function(){this.style.background=AB2.solvedBg;});
-        document.getElementById('btn-leave')?.addEventListener('mouseenter', function(){this.style.background=AB2.leaveHoverBg;});
-        document.getElementById('btn-leave')?.addEventListener('mouseleave', function(){this.style.background=AB2.leaveBg;});
+        document.getElementById('btn-solved')?.addEventListener('mouseenter', function(){this.style.background=AB.solvedHoverBg;});
+        document.getElementById('btn-solved')?.addEventListener('mouseleave', function(){this.style.background=AB.solvedBg;});
+        document.getElementById('btn-leave')?.addEventListener('mouseenter', function(){this.style.background=AB.leaveHoverBg;});
+        document.getElementById('btn-leave')?.addEventListener('mouseleave', function(){this.style.background=AB.leaveBg;});
     }
-
     const chatPh=document.getElementById('chat-placeholder'), chatMsgs=document.getElementById('chat-messages'), chatInput=document.getElementById('chat-input-wrap');
     if(chatPh)chatPh.style.display='none'; if(chatMsgs)chatMsgs.style.display='block'; if(chatInput)chatInput.style.display='flex';
-    const editor=document.getElementById('chat-editor'); if(editor)editor.innerHTML=''; updateImagePreview();
+    const editor=document.getElementById('chat-editor');
+    if(editor){ editor.innerHTML = loadDraft(channelId); }
+    updateImagePreview();
     if(messagesCache[channelId]?.items?.length) {
         renderChatMessages(channelId, messagesCache[channelId].items, false);
     } else {
@@ -754,6 +751,49 @@ function openOriginalTicket(studentName) {
     setTimeout(()=>{if(root?.hasAttribute('data-fes-hidden')){root.style.visibility='hidden';root.style.pointerEvents='none';}},500);
 }
 function startMsgRefresh(c) { if(msgRefreshTimer)clearInterval(msgRefreshTimer); msgRefreshTimer=setInterval(()=>{if(activeChannelId===c)triggerFetchMessages(c);},CONFIG.intervals.messageRefresh); }
+function saveDraft(channelId, html) { if (!channelId) return; try { if(html && html !== '<br>') localStorage.setItem(`fes_draft_${channelId}`, html); else localStorage.removeItem(`fes_draft_${channelId}`); } catch(e) {} }
+function loadDraft(channelId) { try { return localStorage.getItem(`fes_draft_${channelId}`) || ''; } catch(e) { return ''; } }
+
+function showMediaModal(type, src) {
+    document.getElementById('fes-media-modal')?.remove();
+    const overlay = document.createElement('div');
+    overlay.id = 'fes-media-modal';
+    overlay.style.cssText = `position:fixed;inset:0;background:rgba(0,0,0,0.92);display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(8px);`;
+    if (type === 'image') {
+        let scale = 1, startX = 0, startY = 0, offsetX = 0, offsetY = 0, isDragging = false;
+        overlay.innerHTML = `<div style="position:relative;max-width:90vw;max-height:90vh;user-select:none;">
+            <img id="fes-modal-img" src="${src}" style="max-width:90vw;max-height:85vh;border-radius:8px;cursor:grab;display:block;transform-origin:center;transition:transform 0.1s;" draggable="false">
+            <div style="position:absolute;bottom:-36px;left:50%;transform:translateX(-50%);display:flex;gap:8px;">
+                <button id="fes-zoom-in" style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;cursor:pointer;font-size:13px;">＋</button>
+                <button id="fes-zoom-out" style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;cursor:pointer;font-size:13px;">－</button>
+                <button id="fes-zoom-reset" style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;cursor:pointer;font-size:11px;">Reset</button>
+                <a href="${src}" target="_blank" style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;cursor:pointer;font-size:11px;text-decoration:none;">↗ Open</a>
+            </div>
+        </div>`;
+        document.body.appendChild(overlay);
+        const img = document.getElementById('fes-modal-img');
+        const applyTransform = () => { img.style.transform = `translate(${offsetX}px, ${offsetY}px) scale(${scale})`; };
+        img.addEventListener('mousedown', e => { isDragging = true; startX = e.clientX - offsetX; startY = e.clientY - offsetY; img.style.cursor = 'grabbing'; img.style.transition = 'none'; });
+        document.addEventListener('mousemove', e => { if (!isDragging) return; offsetX = e.clientX - startX; offsetY = e.clientY - startY; applyTransform(); });
+        document.addEventListener('mouseup', () => { isDragging = false; img.style.cursor = 'grab'; img.style.transition = 'transform 0.1s'; });
+        img.addEventListener('wheel', e => { e.preventDefault(); scale = Math.min(5, Math.max(0.5, scale - e.deltaY * 0.001)); applyTransform(); }, { passive: false });
+        document.getElementById('fes-zoom-in').addEventListener('click', () => { scale = Math.min(5, scale + 0.25); applyTransform(); });
+        document.getElementById('fes-zoom-out').addEventListener('click', () => { scale = Math.max(0.5, scale - 0.25); applyTransform(); });
+        document.getElementById('fes-zoom-reset').addEventListener('click', () => { scale = 1; offsetX = 0; offsetY = 0; applyTransform(); });
+    } else if (type === 'video') {
+        overlay.innerHTML = `<div style="position:relative;max-width:90vw;">
+            <video src="${src}" controls autoplay style="max-width:90vw;max-height:85vh;border-radius:8px;display:block;"></video>
+            <div style="position:absolute;bottom:-36px;right:0;display:flex;gap:8px;">
+                <a href="${src}" target="_blank" style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;font-size:11px;text-decoration:none;">↗ Open</a>
+                <a href="${src}" download style="padding:4px 12px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;color:#fff;font-size:11px;text-decoration:none;">⬇ Download</a>
+            </div>
+        </div>`;
+        document.body.appendChild(overlay);
+    }
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.remove(); });
+    const onKey = e => { if (e.key === 'Escape') { overlay.remove(); document.removeEventListener('keydown', onKey); } };
+    document.addEventListener('keydown', onKey);
+}
 
 function renderChatMessages(channelId, messages, isAppend) {
     const chatArea=document.getElementById('chat-messages'); if(!chatArea) return;
@@ -761,10 +801,8 @@ function renderChatMessages(channelId, messages, isAppend) {
     const sorted=[...messages].sort((a,b)=>a.id-b.id);
     const total=messagesCache[channelId]?.total||0, loaded=sorted.length, hasMore=loaded<total;
     if(sorted.length===0){chatArea.innerHTML=`<div style="display:flex;align-items:center;justify-content:center;height:100%;color:${CONFIG.emptyState.color};font-size:13px;">No messages yet</div>`;return;}
-
     let html='';
     if(hasMore) html+=`<div style="text-align:center;padding:10px;"><button id="btn-load-more" style="padding:6px 16px;background:${CONFIG.chat.loadMoreBackground};border:1px solid ${CONFIG.chat.loadMoreBorder};border-radius:${CONFIG.buttons.borderRadius};color:${CONFIG.text.secondary};font-size:12px;cursor:pointer;font-family:inherit;">Load older (${loaded}/${total})</button></div>`;
-
     let lastDate='', lastUser='';
     sorted.forEach(msg=>{
         const user=msg.users||{}, userName=user.display_name||'Unknown', userImg=user.image_url||'';
@@ -773,20 +811,129 @@ function renderChatMessages(channelId, messages, isAppend) {
         const bubbleBg=isMentor?CONFIG.chat.messageBubbleMentor:CONFIG.chat.messageBubbleStudent;
         const attachments=msg.attachments||[];
         let attachHtml='';
-        attachments.forEach(att=>{const url=att.url||att.file_url||att.fileUrl||'';const type=att.type||att.mime_type||'';
-            if(url&&(type.startsWith('image')||/\.(png|jpe?g|gif|webp|svg)(\?|$)/i.test(url)))attachHtml+=`<img src="${url}" style="max-width:${CONFIG.chat.imageMaxWidth};border-radius:${CONFIG.chat.imageBorderRadius};margin:4px 0;cursor:pointer;display:block;" onclick="window.open('${url}','_blank')"/>`;
-            else if(url)attachHtml+=`<a href="${url}" target="_blank" style="font-size:12px;color:${CONFIG.text.link};display:block;margin:4px 0;">📎 ${att.name||'Attachment'}</a>`;
+        attachments.forEach(att => {
+            const url = att.url||att.file_url||att.fileUrl||'';
+            const assetType = att.asset_type||att.type||att.mime_type||'';
+            const name = att.attachment_name||att.name||'';
+            const isImage = assetType.startsWith('image') || /\.(png|jpe?g|gif|webp|svg)(\?|$)/i.test(url) || /\.(png|jpe?g|gif|webp|svg)$/i.test(name);
+            const isVideo = assetType.startsWith('video') || /\.(mp4|webm|mov|ogg)(\?|$)/i.test(url) || /\.(mp4|webm|mov|ogg)$/i.test(name);
+            if (url && isImage) {
+                attachHtml += `<img src="${url}" style="max-width:${CONFIG.chat.imageMaxWidth};border-radius:${CONFIG.chat.imageBorderRadius};margin:4px 0;cursor:pointer;display:block;" onclick="document.dispatchEvent(new CustomEvent('fes-media-open',{detail:{type:'image',src:'${url}'}}))"/>`;
+            } else if (url && isVideo) {
+                attachHtml += `<div style="position:relative;display:inline-block;max-width:${CONFIG.chat.imageMaxWidth};margin:4px 0;cursor:pointer;" onclick="document.dispatchEvent(new CustomEvent('fes-media-open',{detail:{type:'video',src:'${url}'}}))"><video src="${url}" autoplay muted loop playsinline style="max-width:100%;border-radius:${CONFIG.chat.imageBorderRadius};display:block;"></video><div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;border-radius:${CONFIG.chat.imageBorderRadius};"><div style="width:36px;height:36px;border-radius:50%;background:rgba(0,0,0,0.55);display:flex;align-items:center;justify-content:center;backdrop-filter:blur(4px);"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="white"><polygon points="5 3 19 12 5 21 5 3"/></svg></div></div></div>`;
+            } else if (url) {
+                attachHtml += `<a href="${url}" target="_blank" style="font-size:12px;color:${CONFIG.text.link};display:block;margin:4px 0;">📎 ${name||'Attachment'}</a>`;
+            }
         });
         if(date!==lastDate){html+=`<div style="text-align:center;padding:12px 0 8px;"><span style="font-size:11px;color:${CONFIG.text.veryMuted};background:rgba(0,0,0,0.3);padding:3px 12px;border-radius:10px;">${date}</span></div>`;lastDate=date;lastUser='';}
         const showH=userName!==lastUser; lastUser=userName;
-        html+=`<div class="fes-msg-row" style="padding:3px 16px;transition:background 0.1s;">`;
+        html+=`<div class="fes-msg-row" data-msg-id="${msg.id}" data-channel-id="${channelId}" data-is-mine="${isMentor}" style="position:relative;padding:3px 16px;transition:background 0.2s ease;">`;
         if(showH)html+=`<div style="display:flex;align-items:center;gap:8px;margin-top:8px;margin-bottom:4px;">${makeAvatar(userImg,userName,CONFIG.avatar.sizeSmall)}<span style="font-size:13px;font-weight:600;color:${CONFIG.text.primary};">${userName}</span><span style="font-size:10px;color:${CONFIG.chat.timestampColor};">${time}</span></div>`;
-        html+=`<div style="padding:6px 10px;margin-left:32px;border-radius:${CONFIG.chat.messageBubbleBorderRadius};background:${bubbleBg};margin-bottom:2px;"><div class="fes-msg-content" style="font-size:13px;color:${CONFIG.text.secondary};line-height:1.5;word-wrap:break-word;">${content}</div>${attachHtml}${!showH?`<div style="font-size:10px;color:${CONFIG.chat.timestampColor};text-align:right;margin-top:2px;">${time}</div>`:''}</div></div>`;
+        html+=`<div style="padding:6px 10px;margin-left:32px;border-radius:${CONFIG.chat.messageBubbleBorderRadius};background:${bubbleBg};margin-bottom:2px;"><div class="fes-msg-content" style="font-size:13px;color:${CONFIG.text.secondary};line-height:1.5;word-wrap:break-word;">${content}</div>${attachHtml}${!showH?`<div style="font-size:10px;color:${CONFIG.chat.timestampColor};text-align:right;margin-top:2px;">${time}</div>`:''}</div>`;
+        html+=`<div class="fes-reactions" data-msg-id="${msg.id}" style="display:flex;flex-wrap:wrap;gap:4px;margin-left:32px;margin-top:2px;"></div>`;
+        html+=`</div>`;
     });
     chatArea.innerHTML=html;
     document.getElementById('btn-load-more')?.addEventListener('click',()=>{const b=document.getElementById('btn-load-more');if(b){b.textContent='Loading...';b.disabled=true;}triggerFetchMessages(channelId,loaded,CONFIG.intervals.messagesPerPage,true);});
     if(isAppend){chatArea.scrollTop=chatArea.scrollHeight-pSH+pST;}else{chatArea.scrollTop=chatArea.scrollHeight;}
-    chatArea.querySelectorAll('.fes-msg-row').forEach(r=>{r.addEventListener('mouseenter',()=>{r.style.background=CONFIG.chat.messageHoverBg;});r.addEventListener('mouseleave',()=>{r.style.background='transparent';});});
+    const REACTIONS = ['👀','✅','🙌'];
+    chatArea.querySelectorAll('.fes-msg-row').forEach(row => {
+        row.addEventListener('mouseenter', () => {
+            row.style.background = CONFIG.chat.messageHoverBg;
+            if (row.querySelector('.fes-msg-actions')) return;
+            const msgId = row.dataset.msgId;
+            const chId = row.dataset.channelId;
+            const bar = document.createElement('div');
+            bar.className = 'fes-msg-actions';
+            bar.style.cssText = `position:absolute;top:-14px;right:20px;display:flex;align-items:center;gap:4px;background:${CONFIG.columns.headerBackground};border:1px solid ${CONFIG.dividers.color};border-radius:10px;padding:3px 8px;z-index:50;backdrop-filter:blur(12px);`;
+            REACTIONS.forEach(em => {
+                const b = document.createElement('div');
+                b.textContent = em;
+                b.style.cssText = `width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:4px;cursor:pointer;font-size:14px;transition:background 0.1s;`;
+                b.addEventListener('mouseenter', () => { b.style.background = CONFIG.cards.backgroundHover; });
+                b.addEventListener('mouseleave', () => { b.style.background = 'none'; });
+                b.addEventListener('click', () => {
+                    injectCall(`(async()=>{ const authId = window.Clerk?.session?.user?.id||''; if(window.__fesWsSendReaction) window.__fesWsSendReaction(${msgId},${chId},${JSON.stringify(em)},authId); })();`);
+                });
+                bar.appendChild(b);
+            });
+            const divider = document.createElement('div');
+            divider.style.cssText = `width:1px;height:16px;background:${CONFIG.dividers.color};margin:0 2px;`;
+            bar.appendChild(divider);
+            const ai = document.createElement('div');
+            ai.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 18V5"/><path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/><path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/><path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/><path d="M18 18a4 4 0 0 0 2-7.464"/><path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/><path d="M6 18a4 4 0 0 1-2-7.464"/><path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>`;
+            ai.style.cssText = `width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:4px;cursor:pointer;color:${CONFIG.text.muted};transition:all 0.1s;`;
+            ai.title = 'AI assist';
+            ai.addEventListener('mouseenter', () => { ai.style.background = CONFIG.cards.backgroundHover; ai.style.color = CONFIG.text.primary; });
+            ai.addEventListener('mouseleave', () => { ai.style.background = 'none'; ai.style.color = CONFIG.text.muted; });
+            ai.addEventListener('click', async () => {
+                ai.style.opacity = '0.4'; ai.style.pointerEvents = 'none';
+                const s = document.createElement('script');
+                s.textContent = `(async () => {
+                    const token = window.Clerk?.session ? await window.Clerk.session.getToken() : null;
+                    if (!token) return;
+                    const r = await fetch('https://backend-preview.fesinstitute.com/ai/channel/${chId}/message/${msgId}', { headers: { 'Authorization': 'Bearer ' + token } });
+                    const d = await r.json();
+                    const suggestion = d.reply_suggestion || '';
+                    if (suggestion) window.dispatchEvent(new CustomEvent('fes-ai-suggestion', { detail: { suggestion } }));
+                })();`;
+                document.head.appendChild(s); s.remove();
+                const handler = e => {
+                    window.removeEventListener('fes-ai-suggestion', handler);
+                    const editor = document.getElementById('chat-editor');
+                    if (editor && e.detail.suggestion) {
+                        editor.focus();
+                        const p = document.createElement('p');
+                        p.textContent = e.detail.suggestion;
+                        editor.appendChild(p);
+                        const range = document.createRange();
+                        range.selectNodeContents(editor);
+                        range.collapse(false);
+                        const sel = window.getSelection();
+                        sel.removeAllRanges(); sel.addRange(range);
+                    }
+                    ai.style.opacity = '1'; ai.style.pointerEvents = 'auto';
+                };
+                window.addEventListener('fes-ai-suggestion', handler);
+            });
+            bar.appendChild(ai);
+            if (row.dataset.isMine === 'true') {
+                const edit = document.createElement('div');
+                edit.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/><path d="m15 5 4 4"/></svg>`;
+                edit.style.cssText = `width:24px;height:24px;display:flex;align-items:center;justify-content:center;border-radius:4px;cursor:pointer;color:${CONFIG.text.muted};transition:all 0.1s;`;
+                edit.title = 'Edit message';
+                edit.addEventListener('mouseenter', () => { edit.style.background = CONFIG.cards.backgroundHover; edit.style.color = CONFIG.text.primary; });
+                edit.addEventListener('mouseleave', () => { edit.style.background = 'none'; edit.style.color = CONFIG.text.muted; });
+                edit.addEventListener('click', () => {
+                    const bubble = row.querySelector('.fes-msg-content'); if (!bubble) return;
+                    const orig = bubble.innerHTML;
+                    bubble.contentEditable = 'true'; bubble.style.outline = `1px solid ${CONFIG.chat.inputFocusBorder}`; bubble.style.borderRadius = '4px'; bubble.focus();
+                    row.querySelector('.fes-edit-confirm')?.remove();
+                    const confirmBar = document.createElement('div');
+                    confirmBar.className = 'fes-edit-confirm';
+                    confirmBar.style.cssText = `display:flex;gap:6px;margin-top:4px;margin-left:32px;`;
+                    confirmBar.innerHTML = `<button class="fes-edit-save" style="padding:3px 10px;background:${CONFIG.sendButton.background};border:none;border-radius:5px;color:${CONFIG.sendButton.color};font-size:11px;font-weight:500;cursor:pointer;font-family:inherit;">Save</button><button class="fes-edit-cancel" style="padding:3px 10px;background:transparent;border:1px solid ${CONFIG.dividers.color};border-radius:5px;color:${CONFIG.text.muted};font-size:11px;cursor:pointer;font-family:inherit;">Cancel</button><span style="font-size:10px;color:${CONFIG.text.veryMuted};align-self:center;">Enter to save · Esc to cancel</span>`;
+                    row.appendChild(confirmBar);
+                    const finish = (save) => {
+                        bubble.contentEditable = 'false'; bubble.style.outline = 'none'; confirmBar.remove();
+                        if (save) { const newHtml = bubble.innerHTML; if (newHtml !== orig) injectCall(`if(window.__fesWsEditMessage) window.__fesWsEditMessage(${msgId}, ${chId}, ${JSON.stringify(newHtml)});`); }
+                        else { bubble.innerHTML = orig; }
+                        bubble.removeEventListener('keydown', onKey);
+                    };
+                    const onKey = e => { if (e.key==='Enter'&&!e.shiftKey){e.preventDefault();finish(true);} if(e.key==='Escape'){finish(false);} };
+                    bubble.addEventListener('keydown', onKey);
+                    confirmBar.querySelector('.fes-edit-save').addEventListener('click', () => finish(true));
+                    confirmBar.querySelector('.fes-edit-cancel').addEventListener('click', () => finish(false));
+                });
+                bar.appendChild(edit);
+            }
+            row.appendChild(bar);
+        });
+        row.addEventListener('mouseleave', () => {
+            row.style.background = 'transparent';
+            setTimeout(() => { if (!row.matches(':hover')) row.querySelector('.fes-msg-actions')?.remove(); }, 200);
+        });
+    });
 }
 
 const ICONS = {
@@ -806,22 +953,19 @@ function createLayout() {
     if (document.getElementById('three-col')) return;
     const root=document.getElementById('root');
     if(root){root.setAttribute('data-fes-hidden','true');root.style.visibility='hidden';root.style.pointerEvents='none';root.style.position='fixed';root.style.height='0';root.style.overflow='visible';}
-
     const wrap=document.createElement('div');wrap.id='three-col';
     wrap.style.cssText=`position:fixed;inset:0;display:flex;flex-direction:column;z-index:100;font-family:${CONFIG.font.family};`;
     const TB=CONFIG.toolbar;
-
     wrap.innerHTML=`
     <nav id="fes-navbar" style="height:${CONFIG.layout.navbarHeight};display:flex;align-items:center;padding:0 16px;gap:12px;background:${CONFIG.navbar.background};backdrop-filter:blur(${CONFIG.navbar.blur});border-bottom:1px solid ${CONFIG.navbar.border};flex-shrink:0;z-index:101;">
         <div style="font-size:14px;font-weight:700;color:${CONFIG.text.primary};margin-right:8px;">FES Tickets</div>
         <a href="/dashboard/fes/admin/tickets" class="fes-nav-link active" style="font-size:12px;color:${CONFIG.navbar.linkActiveColor};background:${CONFIG.navbar.linkActiveBg};padding:5px 10px;border-radius:${CONFIG.buttons.borderRadius};text-decoration:none;">Tickets</a>
-         <a href="/dashboard/fes/admin/users" class="fes-nav-link" style="font-size:12px;color:${CONFIG.navbar.linkColor};padding:5px 10px;border-radius:${CONFIG.buttons.borderRadius};text-decoration:none;">Users</a>
-                <a href="https://app.fesinstitute.com/dashboard/fes/program" class="fes-nav-link" style="font-size:12px;color:${CONFIG.navbar.linkColor};padding:5px 10px;border-radius:${CONFIG.buttons.borderRadius};text-decoration:none;">Program</a>
+        <a href="/dashboard/fes/admin/users" class="fes-nav-link" style="font-size:12px;color:${CONFIG.navbar.linkColor};padding:5px 10px;border-radius:${CONFIG.buttons.borderRadius};text-decoration:none;">Users</a>
+        <a href="https://app.fesinstitute.com/dashboard/fes/program" class="fes-nav-link" style="font-size:12px;color:${CONFIG.navbar.linkColor};padding:5px 10px;border-radius:${CONFIG.buttons.borderRadius};text-decoration:none;">Program</a>
         <div style="flex:1;"></div>
         <div style="position:relative;max-width:280px;flex:1;"><input id="fes-search" type="text" placeholder="Search tickets..." style="width:100%;height:30px;padding:0 10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#fff;font-size:12px;font-family:inherit;outline:none;"></div>
         <button id="btn-refresh-nav" style="padding:4px 10px;background:${CONFIG.buttons.background};border:1px solid ${CONFIG.buttons.border};border-radius:${CONFIG.buttons.borderRadius};color:${CONFIG.buttons.text};cursor:pointer;font-size:12px;font-family:inherit;">↻ Refresh</button>
-        <!-- FIX 3: WS status dot — green = connected via WebSocket, red = polling fallback -->
-        <div id="fes-ws-indicator" title="Polling every 30s (WS hook active)" style="width:8px;height:8px;border-radius:9999px;background:#f59e0b;flex-shrink:0;transition:background 0.5s;animation:fes-pulse 2s infinite;" ></div>
+        <div id="fes-ws-indicator" title="Polling every 30s (WS hook active)" style="width:8px;height:8px;border-radius:9999px;background:#f59e0b;flex-shrink:0;transition:background 0.5s;animation:fes-pulse 2s infinite;"></div>
     </nav>
     <div id="fes-columns" style="display:flex;flex:1;overflow:hidden;">
         <div id="col-left" style="width:${CONFIG.layout.leftWidth};height:100%;display:flex;flex-direction:column;background:${CONFIG.columns.background};backdrop-filter:blur(${CONFIG.columns.blur});border-right:1px solid ${CONFIG.dividers.color};overflow:hidden;">
@@ -843,6 +987,7 @@ function createLayout() {
                     <button class="tb-btn" data-cmd="code" title="Code">${svgIcon('code')}</button>
                     <button class="tb-btn" data-cmd="codeBlock" title="Code block">${svgIcon('codeBlock')}</button>
                     <button class="tb-btn" data-cmd="link" title="Link">${svgIcon('link')}</button>
+                    <button class="tb-btn" id="btn-emoji" title="Emoji">😊</button>
                     <div style="width:1px;height:16px;background:${TB.dividerColor};margin:0 4px;"></div>
                     <button class="tb-btn" id="btn-attach" title="Attach">${svgIcon('attach')}</button>
                     <input id="file-input" type="file" multiple accept="image/*,video/*,audio/*,application/pdf,.doc,.docx,.xls,.xlsx,.txt" style="display:none;">
@@ -866,27 +1011,61 @@ function createLayout() {
             <div id="list-assignments" class="fes-scroll fes-tab-panel" data-panel="assignments" style="flex:1;overflow-y:auto;padding:6px;display:none;"></div>
         </div>
     </div>`;
-
     document.body.appendChild(wrap);
-
     document.querySelectorAll('#right-tabs .fes-tab').forEach(tab=>{tab.addEventListener('click',()=>{const t=tab.dataset.tab;document.querySelectorAll('#right-tabs .fes-tab').forEach(b=>{const a=b.dataset.tab===t;b.style.color=a?CONFIG.tabs.activeColor:CONFIG.tabs.inactiveColor;b.style.borderBottomColor=a?CONFIG.tabs.underlineColor:'transparent';});document.querySelectorAll('.fes-tab-panel').forEach(p=>{p.style.display=p.dataset.panel===t?'block':'none';});if(t==='assignments'&&assignmentsCache.items.length===0){triggerFetchAssignments(0,10,'');triggerFetchAssignmentCount();}});});
     document.getElementById('btn-refresh-nav').addEventListener('click',()=>{triggerRefresh();triggerFetchAssignments(0,10,'');triggerFetchAssignmentCount();if(activeChannelId)triggerFetchMessages(activeChannelId);});
     document.getElementById('fes-search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.fes-card').forEach(c=>{c.style.display=(!q||(c.dataset.studentName||'').toLowerCase().includes(q)||c.textContent.toLowerCase().includes(q))?'':'none';});});
-
     const editor=document.getElementById('chat-editor');
     editor.addEventListener('focus',()=>{editor.style.borderColor=CONFIG.chat.inputFocusBorder;});
+    editor.addEventListener('input', () => { saveDraft(activeChannelId, editor.innerHTML); });
     editor.addEventListener('blur',()=>{editor.style.borderColor=CONFIG.chat.inputBorder;});
     editor.addEventListener('keydown',e=>{if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendMessage();}});
     document.querySelectorAll('.tb-btn[data-cmd]').forEach(btn=>{btn.addEventListener('click',()=>{editor.focus();const cmd=btn.dataset.cmd;
-        if(cmd==='code'){const s=window.getSelection();if(s.rangeCount){const r=s.getRangeAt(0),c=document.createElement('code');c.style.cssText=`background:${CONFIG.chat.codeBlockBackground};border:1px solid ${CONFIG.chat.codeBlockBorder};padding:1px 4px;border-radius:3px;font-size:12px;`;r.surroundContents(c);}}
-        else if(cmd==='codeBlock'){const s=window.getSelection();if(s.rangeCount){const r=s.getRangeAt(0),p=document.createElement('pre');p.style.cssText=`background:${CONFIG.chat.codeBlockBackground};border:1px solid ${CONFIG.chat.codeBlockBorder};padding:8px;border-radius:6px;margin:4px 0;`;const c=document.createElement('code');c.style.fontSize='12px';c.textContent=r.toString();r.deleteContents();p.appendChild(c);r.insertNode(p);}}
-        else if(cmd==='link'){const u=prompt('Enter URL:');if(u)document.execCommand('createLink',false,u);}
+        if(cmd==='code'){
+            const s=window.getSelection(); if(!s.rangeCount) return;
+            const r=s.getRangeAt(0), c=document.createElement('code');
+            c.style.cssText=`background:${CONFIG.chat.codeBlockBackground};border:1px solid ${CONFIG.chat.codeBlockBorder};padding:1px 4px;border-radius:3px;font-size:12px;`;
+            c.textContent=r.toString()||'\u200b'; r.deleteContents(); r.insertNode(c);
+            const nr=document.createRange(); nr.selectNodeContents(c); nr.collapse(false); s.removeAllRanges(); s.addRange(nr);
+        } else if(cmd==='codeBlock'){
+            const s=window.getSelection();
+            const pre=document.createElement('pre');
+            pre.style.cssText=`background:${CONFIG.chat.codeBlockBackground};border:1px solid ${CONFIG.chat.codeBlockBorder};padding:8px;border-radius:6px;margin:4px 0;`;
+            const c=document.createElement('code'); c.style.fontSize='12px';
+            c.textContent=(s.rangeCount ? s.getRangeAt(0).toString() : '') || '\u200b';
+            if(s.rangeCount){ const r=s.getRangeAt(0); r.deleteContents(); r.insertNode(pre); } else { editor.appendChild(pre); }
+            pre.appendChild(c);
+            const nr=document.createRange(); nr.selectNodeContents(c); nr.collapse(false); s.removeAllRanges(); s.addRange(nr);
+        } else if(cmd==='link'){const u=prompt('Enter URL:');if(u)document.execCommand('createLink',false,u);}
         else{document.execCommand(cmd,false,null);}
     });});
     document.getElementById('btn-attach').addEventListener('click',()=>{document.getElementById('file-input').click();});
     document.getElementById('file-input').addEventListener('change',handleFileSelect);
     document.getElementById('btn-send').addEventListener('click',sendMessage);
-    const bs=document.getElementById('btn-send');bs.addEventListener('mouseenter',()=>{bs.style.background=CONFIG.sendButton.backgroundHover;});bs.addEventListener('mouseleave',()=>{bs.style.background=CONFIG.sendButton.background;});
+    document.getElementById('btn-emoji').addEventListener('click', () => {
+        let picker = document.getElementById('fes-emoji-picker');
+        if (picker) { picker.remove(); return; }
+        const EMOJIS = ['😊','😂','🔥','👍','👀','✅','🙌','❤️','🚀','😭','💀','🤔','😅','👏','💯','🎉','😎','🙏','💪','⚡','🫡','😤','🥲','😮','🤯'];
+        picker = document.createElement('div');
+        picker.id = 'fes-emoji-picker';
+        picker.style.cssText = `position:absolute;bottom:100%;left:0;background:${CONFIG.columns.headerBackground};border:1px solid ${CONFIG.dividers.color};border-radius:8px;padding:8px;display:flex;flex-wrap:wrap;gap:4px;width:220px;z-index:999;backdrop-filter:blur(12px);`;
+        EMOJIS.forEach(em => {
+            const b = document.createElement('button');
+            b.textContent = em;
+            b.style.cssText = `background:none;border:none;cursor:pointer;font-size:18px;padding:2px 4px;border-radius:4px;transition:background 0.1s;`;
+            b.addEventListener('mouseenter', () => { b.style.background = CONFIG.cards.backgroundHover; });
+            b.addEventListener('mouseleave', () => { b.style.background = 'none'; });
+            b.addEventListener('click', () => { editor.focus(); document.execCommand('insertText', false, em); picker.remove(); });
+            picker.appendChild(b);
+        });
+        const wrap = document.getElementById('chat-toolbar');
+        wrap.style.position = 'relative';
+        wrap.appendChild(picker);
+        setTimeout(() => document.addEventListener('click', function h(e){ if(!picker.contains(e.target)&&e.target.id!=='btn-emoji'){picker.remove();document.removeEventListener('click',h);}}), 100);
+    });
+    const bs=document.getElementById('btn-send');
+    bs.addEventListener('mouseenter',()=>{bs.style.background=CONFIG.sendButton.backgroundHover;});
+    bs.addEventListener('mouseleave',()=>{bs.style.background=CONFIG.sendButton.background;});
     editor.addEventListener('paste',e=>{const items=e.clipboardData?.items;if(!items)return;for(const item of items){if(item.type.startsWith('image/')){e.preventDefault();addPendingImage(item.getAsFile());break;}}});
 }
 
@@ -900,20 +1079,16 @@ function sendMessage(){
     if((!text&&pendingImages.length===0)||!activeChannelId)return;
     const btn=document.getElementById('btn-send');if(btn){btn.textContent='Sending...';btn.disabled=true;}editor.contentEditable='false';
     const wasUnassigned=activeTicketSource==='unassigned'||activeTicketSource==='other';
-    if(wasUnassigned && activeTicketId) {
-        triggerAssignTicket(activeTicketId);
-        activeTicketSource='my'; // optimistically update source so card moves correctly
-    }
+    if(wasUnassigned && activeTicketId){triggerAssignTicket(activeTicketId);activeTicketSource='my';}
     if(pendingImages.length>0){triggerUploadAndSend(activeChannelId,html||'',pendingImages.map(i=>({base64:i.base64,name:i.name,mime:i.mime})));}
     else{triggerSendMessage(activeChannelId,html||'<p></p>');}
-    editor.innerHTML='';pendingImages=[];updateImagePreview();
+    editor.innerHTML=''; saveDraft(activeChannelId, ''); pendingImages=[];updateImagePreview();
     setTimeout(()=>{editor.contentEditable='true';editor.focus();if(btn){btn.textContent='Send';btn.disabled=false;}if(wasUnassigned)setTimeout(()=>triggerRefresh(),1500);},600);
 }
 
 function populateColumns(){
     const cMy=document.getElementById('count-my'),cO=document.getElementById('count-other'),cU=document.getElementById('count-unassigned');
     if(cMy)cMy.textContent=`(${ticketsCache.my.length})`;if(cO)cO.textContent=`(${ticketsCache.other.length})`;if(cU)cU.textContent=`(${ticketsCache.unassigned.length})`;
-
     function fill(listId,tickets,source){
         const sorted=sortTicketsByWait(tickets);
         const el=document.getElementById(listId);if(!el)return;el.innerHTML='';
@@ -927,10 +1102,7 @@ function populateColumns(){
 function populateAssignments(){
     const el=document.getElementById('list-assignments');if(!el)return;el.innerHTML='';
     let count=0;
-    assignmentsCache.items.forEach(s=>{
-        const card=makeAssignmentCard(s);
-        if(card){el.appendChild(card);count++;}
-    });
+    assignmentsCache.items.forEach(s=>{const card=makeAssignmentCard(s);if(card){el.appendChild(card);count++;}});
     if(count===0){el.innerHTML=`<div style="text-align:center;padding:2rem;color:${CONFIG.emptyState.color};font-size:12px;">No assignments needing review</div>`;}
     if(assignmentsCache.items.length<assignmentsCache.total){
         const ld=document.createElement('div');ld.style.cssText='text-align:center;padding:10px;';
@@ -953,6 +1125,7 @@ function applyStyles(){
     .fes-nav-link{transition:color 0.15s,background 0.15s;}.fes-nav-link:hover{background:${CONFIG.navbar.linkActiveBg};}#fes-search:focus{border-color:rgba(99,102,241,0.5);background:rgba(255,255,255,0.1);}
     #chat-editor:empty:before{content:attr(data-placeholder);color:${CONFIG.chat.inputPlaceholder};pointer-events:none;}#chat-editor:focus{border-color:${CONFIG.chat.inputFocusBorder};}
     @keyframes fes-pulse{0%,100%{opacity:1;}50%{opacity:0.4;}}
+    .fes-msg-row{transition:background 0.2s ease;}.fes-msg-actions{animation:fes-actions-in 0.15s ease forwards;}.fes-edit-confirm{animation:fes-actions-in 0.12s ease forwards;}@keyframes fes-actions-in{from{opacity:0;transform:translateY(4px);}to{opacity:1;transform:translateY(0);}}
     .tb-btn{background:transparent;border:none;color:${TB.buttonColor};cursor:pointer;padding:6px;border-radius:4px;display:flex;align-items:center;justify-content:center;transition:all 0.15s;}.tb-btn:hover{background:${TB.buttonHoverBg};color:${TB.buttonHoverColor};}`;
 }
 
@@ -961,31 +1134,21 @@ function hideNotifs(){if(window._fesNotifObs)return;window._fesNotifObs=new Muta
 let assignmentRefreshTimer = null;
 
 function startAutoRefresh() {
-
     if (assignmentRefreshTimer) clearInterval(assignmentRefreshTimer);
     assignmentRefreshTimer = setInterval(() => {
-        if (isOnTargetPage) {
-            triggerFetchAssignments(0, 10, '');
-            triggerFetchAssignmentCount();
-        }
+        if (isOnTargetPage) { triggerFetchAssignments(0, 10, ''); triggerFetchAssignmentCount(); }
     }, CONFIG.intervals.assignmentRefresh);
 }
 
 function syncWsIndicator() {
-
     const s = document.createElement('script');
-    s.textContent = `
-        (function() {
-            if (window.__fesWsConnected) {
-                window.dispatchEvent(new CustomEvent('fes-ws-connected'));
-            }
-        })();
-    `;
+    s.textContent = `(function(){ if(window.__fesWsConnected) window.dispatchEvent(new CustomEvent('fes-ws-connected')); })();`;
     document.head.appendChild(s); s.remove();
 }
 
 function initExt(){
     injectPageContext();
+    document.addEventListener('fes-media-open', e => showMediaModal(e.detail.type, e.detail.src));
     setTimeout(()=>{
         applyStyles();
         createLayout();
@@ -995,7 +1158,6 @@ function initExt(){
         setTimeout(()=>triggerRefresh(),2000);
         setTimeout(()=>{if(!ticketsCache.ready)triggerRefresh();},6000);
         setTimeout(triggerFetchAssignmentCount,3000);
-
         setTimeout(syncWsIndicator, 200);
     },1000);
 }
