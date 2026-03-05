@@ -6,7 +6,7 @@ const CONFIG = {
     },
     background: {
         image: 'https://images5.alphacoders.com/557/thumb-1920-557948.jpg',
-        overlay: 'rgba(18, 14, 12, 0.72)', 
+        overlay: 'rgba(18, 14, 12, 0.72)',
         solidColor: '#12100e',
     },
     layout: { leftWidth: '20%', centerWidth: '60%', rightWidth: '20%', navbarHeight: '48px' },
@@ -14,8 +14,8 @@ const CONFIG = {
         background: 'rgba(38, 32, 28, 0.78)',
         backgroundHover: 'rgba(55, 45, 38, 0.90)',
         backgroundActive: 'rgba(180, 30, 30, 0.12)',
-        border: 'rgba(160, 120, 90, 0.18)',       
-        borderHover: 'rgba(180, 30, 30, 0.30)',      
+        border: 'rgba(160, 120, 90, 0.18)',
+        borderHover: 'rgba(180, 30, 30, 0.30)',
         borderActive: 'rgba(180, 30, 30, 0.55)',
         shadow: '0 2px 12px rgba(0, 0, 0, 0.35)',
         blur: '12px', borderRadius: '8px',
@@ -28,20 +28,20 @@ const CONFIG = {
     navbar: {
         background: 'rgba(12, 10, 8, 0.94)',
         blur: '14px',
-        border: 'rgba(180, 30, 30, 0.20)',          
+        border: 'rgba(180, 30, 30, 0.20)',
         linkColor: 'rgba(210, 190, 170, 0.60)',
         linkHoverColor: '#e8d8c8',
         linkActiveColor: '#e8d8c8',
         linkActiveBg: 'rgba(180, 30, 30, 0.15)',
     },
     tabs: {
-        activeColor: '#c8a882',                      
+        activeColor: '#c8a882',
         inactiveColor: 'rgba(200, 170, 140, 0.40)',
-        underlineColor: '#b41e1e',                  
+        underlineColor: '#b41e1e',
         hoverBg: 'rgba(180, 30, 30, 0.08)',
     },
     text: {
-        primary: '#f0e6d8',                          
+        primary: '#f0e6d8',
         secondary: 'rgba(230, 210, 185, 0.88)',
         muted: 'rgba(200, 175, 148, 0.55)',
         veryMuted: 'rgba(180, 155, 125, 0.35)',
@@ -72,8 +72,8 @@ const CONFIG = {
         background: 'rgba(16, 13, 11, 0.78)',
         headerBackground: 'rgba(24, 18, 14, 0.94)',
         headerBlur: '12px',
-        messageBubbleMentor: 'rgba(180, 30, 30, 0.14)',    
-        messageBubbleStudent: 'rgba(100, 80, 60, 0.18)',    
+        messageBubbleMentor: 'rgba(180, 30, 30, 0.14)',
+        messageBubbleStudent: 'rgba(100, 80, 60, 0.18)',
         messageBubbleBorderRadius: '12px',
         messageHoverBg: 'rgba(180, 30, 30, 0.06)',
         inputBackground: 'rgba(10, 8, 6, 0.94)',
@@ -96,7 +96,7 @@ const CONFIG = {
         dividerColor: 'rgba(160, 120, 90, 0.16)',
     },
     sendButton: {
-        background: 'rgba(180, 30, 30, 0.85)',      
+        background: 'rgba(180, 30, 30, 0.85)',
         backgroundHover: 'rgba(180, 30, 30, 1)',
         color: '#f0e6d8',
         borderRadius: '8px',
@@ -136,8 +136,14 @@ const CONFIG = {
     dividers: { color: 'rgba(160, 120, 90, 0.14)' },
     emptyState: { color: 'rgba(180, 155, 125, 0.36)' },
     intervals: { ticketRefresh: 30000, assignmentRefresh: 30000, messageRefresh: 8000, messagesPerPage: 30 },
+    slack: {
+        botToken:    (window.__FES_SECRETS?.slackBotToken  || ''), // set in secrets.js (gitignored)
+        channelId:   (window.__FES_SECRETS?.slackChannelId || ''), // set in secrets.js (gitignored)
+        channelName: 'fes-channel',
+        pollMs:      6000,
+    },
 }
-// end of CONFIG — do not edit below unless you know what you are doing
+
 const MODULE_MAP = {
     'Module 2':             { ids: [39] },
     'Module 4':             { ids: [40, 41] },
@@ -185,11 +191,7 @@ function pageContextInterceptor() {
     window.__fesWsEditMessage = async function(messageId, channelId, newHtml) {
         const authId = window.Clerk?.session?.user?.id || '';
         const payload = { type: 'message_edit', data: { message_id: messageId, channel_id: channelId, message_content: newHtml, auth_id: authId, channel_type: 'default' } };
-        console.log('[FES EDIT] attempting edit', payload);
-        const sock = window.__fesWsInstance;
-        console.log('[FES EDIT] socket state:', sock ? sock.readyState : 'no instance');
         const ok = window.__fesWsEmit?.('events', payload) ?? false;
-        console.log('[FES EDIT] emitted:', ok);
         return ok;
     };
 
@@ -290,6 +292,9 @@ function pageContextInterceptor() {
             return r.ok;
         } catch(e) { return false; }
     };
+
+    // [FIX] Test button: POST user-unit-progress for module 36 / unit 158
+     
 }
 
 function injectPageContext() { const s = document.createElement('script'); s.textContent = '(' + pageContextInterceptor.toString() + ')();'; (document.head||document.documentElement).appendChild(s); s.remove(); }
@@ -368,7 +373,7 @@ window.addEventListener('fes-ws-event', e => {
 
 window.addEventListener('fes-ws-connected', () => {
     const ind = document.getElementById('fes-ws-indicator');
-    if (ind) { ind.title = 'Real-time: WebSocket connected ✓'; ind.style.background = '#4ade80'; ind.style.animation = 'none'; }
+    if (ind) { ind.title = 'Real-time: WebSocket connected'; ind.style.background = '#4ade80'; ind.style.animation = 'none'; }
 });
 window.addEventListener('fes-ws-disconnected', () => {
     const ind = document.getElementById('fes-ws-indicator');
@@ -431,6 +436,8 @@ function triggerAssignTicket(id) { injectCall(`if(window.__fesAssignTicket) wind
 function triggerUnlockModules(moduleIds, userAuthId) { injectCall(`if(window.__fesUnlockModules) window.__fesUnlockModules(${JSON.stringify(moduleIds)}, ${JSON.stringify(userAuthId)});`); }
 function triggerDeleteAssignment(id) { injectCall(`if(window.__fesDeleteAssignment) window.__fesDeleteAssignment(${id});`); }
 function triggerSendToChannel(channelId, html) { injectCall(`(async()=>{ await window.__fesSendMessage(${channelId}, ${JSON.stringify(html)}, []); })();`); }
+// [FIX] Trigger test progress POST
+function triggerTestProgress(userAuthId) { injectCall(`(async()=>{ if(window.__fesTestProgress) await window.__fesTestProgress(${JSON.stringify(userAuthId)}); })();`); }
 
 const TARGET_URLS = ['https://app.fesinstitute.com/dashboard/fes/admin/tickets', 'https://beta.fesinstitute.com/dashboard/fes/program'];
 function isTargetPage(url) { return TARGET_URLS.some(t => url.split('?')[0].split('#')[0].startsWith(t)); }
@@ -457,7 +464,6 @@ function getTicketTimestamp(ticket) {
     if (isStudentLast) { const ms = new Date(lastMsg.created_at).getTime(); return isNaN(ms) ? 0 : ms; }
     return Number.MAX_SAFE_INTEGER;
 }
-
 function sortTicketsByWait(tickets) { return [...tickets].sort((a, b) => getTicketTimestamp(a) - getTicketTimestamp(b)); }
 
 function makeTicketCard(ticket, source) {
@@ -629,13 +635,12 @@ function showDeleteModal(assignmentId, userAuthId, studentName) {
     overlay.style.cssText = `position:fixed;inset:0;background:${M.overlayBg};display:flex;align-items:center;justify-content:center;z-index:999999;backdrop-filter:blur(4px);font-family:${CONFIG.font.family};`;
     overlay.innerHTML = `<div style="background:${M.background};border:1px solid ${M.border};border-radius:${M.borderRadius};width:480px;max-width:90%;padding:24px;">
         <h2 style="margin:0 0 4px;font-size:16px;font-weight:600;color:${CONFIG.text.primary};">Delete Assignment</h2>
-        <p style="margin:0 0 16px;font-size:13px;color:${CONFIG.text.muted};">Deleting assignment for <strong>${studentName}</strong>. Provide a reason — this will be sent as a message in their channel. You can also attach images.</p>
+        <p style="margin:0 0 16px;font-size:13px;color:${CONFIG.text.muted};">Deleting assignment for <strong>${studentName}</strong>. Provide a reason — this will be sent as a message in their channel.</p>
         <div id="delete-image-preview" style="display:none;padding:8px 0;gap:8px;overflow-x:auto;"></div>
-        <textarea id="delete-reason" rows="4" placeholder="Reason for deletion (e.g., doesn't meet requirements, wrong repo link...)" style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.06);border:1px solid ${CONFIG.chat.inputBorder};border-radius:8px;color:${CONFIG.text.primary};font-size:13px;font-family:inherit;outline:none;resize:vertical;line-height:1.5;"></textarea>
+        <textarea id="delete-reason" rows="4" placeholder="Reason for deletion..." style="width:100%;padding:10px 14px;background:rgba(255,255,255,0.06);border:1px solid ${CONFIG.chat.inputBorder};border-radius:8px;color:${CONFIG.text.primary};font-size:13px;font-family:inherit;outline:none;resize:vertical;line-height:1.5;"></textarea>
         <div style="margin:8px 0 0 0;display:flex;align-items:center;gap:10px;">
             <button id="delete-attach-btn" style="padding:6px 12px;background:${CONFIG.buttons.background};border:1px solid ${CONFIG.buttons.border};border-radius:${CONFIG.buttons.borderRadius};color:${CONFIG.buttons.text};cursor:pointer;font-size:12px;font-family:inherit;">Attach Image</button>
             <input id="delete-file-input" type="file" accept="image/*" style="display:none;">
-            <span style="font-size:11px;color:${CONFIG.text.veryMuted};">Paste images or click Attach</span>
         </div>
         <div id="delete-status" style="display:none;padding:12px;border-radius:8px;margin-top:12px;font-size:13px;"></div>
         <div style="display:flex;justify-content:flex-end;gap:8px;margin-top:16px;border-top:1px solid ${CONFIG.dividers.color};padding-top:14px;">
@@ -694,7 +699,7 @@ function showDeleteModal(assignmentId, userAuthId, studentName) {
             status.textContent = `✓ Assignment deleted. Feedback sent to channel.`;
         } else {
             status.style.display = 'block'; status.style.background = 'rgba(234,179,8,0.15)'; status.style.color = '#fbbf24';
-            status.textContent = `⚠ Assignment deleted but couldn't find student's channel to send feedback.`;
+            status.textContent = `⚠ Assignment deleted but couldn't find student's channel.`;
         }
         setTimeout(removeModal, 2000);
     });
@@ -965,6 +970,8 @@ function createLayout() {
         <div style="flex:1;"></div>
         <div style="position:relative;max-width:280px;flex:1;"><input id="fes-search" type="text" placeholder="Search tickets..." style="width:100%;height:30px;padding:0 10px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#fff;font-size:12px;font-family:inherit;outline:none;"></div>
         <button id="btn-refresh-nav" style="padding:4px 10px;background:${CONFIG.buttons.background};border:1px solid ${CONFIG.buttons.border};border-radius:${CONFIG.buttons.borderRadius};color:${CONFIG.buttons.text};cursor:pointer;font-size:12px;font-family:inherit;">↻ Refresh</button>
+        <button id="btn-team-chat" style="padding:4px 10px;background:${CONFIG.buttons.background};border:1px solid ${CONFIG.buttons.border};border-radius:${CONFIG.buttons.borderRadius};color:${CONFIG.buttons.text};cursor:pointer;font-size:12px;font-family:inherit;">💬 Team</button>
+ 
         <div id="fes-ws-indicator" title="Polling every 30s (WS hook active)" style="width:8px;height:8px;border-radius:9999px;background:#f59e0b;flex-shrink:0;transition:background 0.5s;animation:fes-pulse 2s infinite;"></div>
     </nav>
     <div id="fes-columns" style="display:flex;flex:1;overflow:hidden;">
@@ -1012,9 +1019,74 @@ function createLayout() {
         </div>
     </div>`;
     document.body.appendChild(wrap);
+
+    // Tabs
     document.querySelectorAll('#right-tabs .fes-tab').forEach(tab=>{tab.addEventListener('click',()=>{const t=tab.dataset.tab;document.querySelectorAll('#right-tabs .fes-tab').forEach(b=>{const a=b.dataset.tab===t;b.style.color=a?CONFIG.tabs.activeColor:CONFIG.tabs.inactiveColor;b.style.borderBottomColor=a?CONFIG.tabs.underlineColor:'transparent';});document.querySelectorAll('.fes-tab-panel').forEach(p=>{p.style.display=p.dataset.panel===t?'block':'none';});if(t==='assignments'&&assignmentsCache.items.length===0){triggerFetchAssignments(0,10,'');triggerFetchAssignmentCount();}});});
+
     document.getElementById('btn-refresh-nav').addEventListener('click',()=>{triggerRefresh();triggerFetchAssignments(0,10,'');triggerFetchAssignmentCount();if(activeChannelId)triggerFetchMessages(activeChannelId);});
+
     document.getElementById('fes-search').addEventListener('input',e=>{const q=e.target.value.toLowerCase();document.querySelectorAll('.fes-card').forEach(c=>{c.style.display=(!q||(c.dataset.studentName||'').toLowerCase().includes(q)||c.textContent.toLowerCase().includes(q))?'':'none';});});
+
+    // [FIX] Team chat button — lazy-build the panel if it hasn't been built yet
+    document.getElementById('btn-team-chat').addEventListener('click', () => {
+        // Ensure the panel is built (in case team chat IIFE hasn't run yet)
+        if (!document.getElementById('fes-team-chat-panel')) {
+            if (window.__fesTeamBuild) window.__fesTeamBuild();
+            // Try again shortly
+            setTimeout(() => {
+                if (window.__fesTeamOpen) window.__fesTeamOpen();
+            }, 300);
+            return;
+        }
+        const panel = document.getElementById('fes-team-chat-panel');
+        if (panel.style.display === 'flex') {
+            if (window.__fesTeamClose) window.__fesTeamClose();
+            else panel.style.display = 'none';
+        } else {
+            if (window.__fesTeamOpen) window.__fesTeamOpen();
+            else { panel.style.display = 'flex'; panel.style.flexDirection = 'column'; }
+        }
+    });
+
+    // [FIX] Test button — POST user-unit-progress and show result
+    document.getElementById('btn-test-progress').addEventListener('click', () => {
+        const btn = document.getElementById('btn-test-progress');
+        const TEST_USER = 'user_397tivdpXBqoeWuunV5l87SWR79';
+        btn.textContent = '⏳ Testing…';
+        btn.disabled = true;
+        const handler = e => {
+            window.removeEventListener('fes-test-progress-result', handler);
+            const { ok, status, body, error } = e.detail;
+            btn.disabled = false;
+            if (ok) {
+                btn.textContent = `✓ ${status}`;
+                btn.style.background = 'rgba(34,197,94,0.25)';
+                btn.style.borderColor = 'rgba(34,197,94,0.60)';
+                btn.style.color = '#4ade80';
+                console.log('[FES Test] Progress POST success:', body);
+                setTimeout(() => {
+                    btn.textContent = '🧪 Test';
+                    btn.style.background = 'rgba(34,197,94,0.12)';
+                    btn.style.borderColor = 'rgba(34,197,94,0.30)';
+                }, 3000);
+            } else {
+                btn.textContent = `✕ ${status || error || 'err'}`;
+                btn.style.background = 'rgba(239,68,68,0.18)';
+                btn.style.borderColor = 'rgba(239,68,68,0.45)';
+                btn.style.color = '#f87171';
+                console.error('[FES Test] Progress POST failed:', e.detail);
+                setTimeout(() => {
+                    btn.textContent = '🧪 Test';
+                    btn.style.background = 'rgba(34,197,94,0.12)';
+                    btn.style.borderColor = 'rgba(34,197,94,0.30)';
+                    btn.style.color = '#4ade80';
+                }, 4000);
+            }
+        };
+        window.addEventListener('fes-test-progress-result', handler);
+        triggerTestProgress(TEST_USER);
+    });
+
     const editor=document.getElementById('chat-editor');
     editor.addEventListener('focus',()=>{editor.style.borderColor=CONFIG.chat.inputFocusBorder;});
     editor.addEventListener('input', () => { saveDraft(activeChannelId, editor.innerHTML); });
@@ -1162,3 +1234,289 @@ function initExt(){
     },1000);
 }
 setTimeout(()=>{isOnTargetPage=isTargetPage(window.location.href);if(isOnTargetPage)initExt();},800);
+
+// ============================================================
+//  FES TEAM CHAT — Slack-powered staff semi-chat
+// ============================================================
+(function () {
+    const SLACK_TOKEN  = CONFIG.slack.botToken;
+    const POLL_MS      = CONFIG.slack.pollMs || 6000;
+    const LS_CHAN_KEY   = 'fes_tc_channel_id';
+
+    function getSavedChannel() { return CONFIG.slack.channelId || localStorage.getItem(LS_CHAN_KEY) || ''; }
+    function saveChannel(id) { localStorage.setItem(LS_CHAN_KEY, id); }
+
+    let pollTimer  = null, lastTs = null, renderedTs = new Set();
+    let isLoaded   = false, currentUser = 'Staff', CHANNEL_ID = '';
+
+    
+function slackGet(method, params) {
+    return new Promise((resolve, reject) => {
+        const reqId = 'sg_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+
+        const handler = (e) => {
+            if (e.detail.reqId !== reqId) return;
+            window.removeEventListener('fes-slack-response', handler);
+            if (e.detail.ok) resolve(e.detail.data);
+            else reject(new Error(e.detail.error || 'Slack GET failed'));
+        };
+
+        window.addEventListener('fes-slack-response', handler);
+        window.dispatchEvent(new CustomEvent('fes-slack-request', {
+            detail: { reqId, type: 'SLACK_GET', method, params, token: SLACK_TOKEN }
+        }));
+
+        // Safety timeout — 15s
+        setTimeout(() => {
+            window.removeEventListener('fes-slack-response', handler);
+            reject(new Error('Slack GET timeout: ' + method));
+        }, 15000);
+    });
+}
+
+function slackPost(method, body) {
+    return new Promise((resolve, reject) => {
+        const reqId = 'sp_' + Date.now() + '_' + Math.random().toString(36).slice(2);
+
+        const handler = (e) => {
+            if (e.detail.reqId !== reqId) return;
+            window.removeEventListener('fes-slack-response', handler);
+            if (e.detail.ok) resolve(e.detail.data);
+            else reject(new Error(e.detail.error || 'Slack POST failed'));
+        };
+
+        window.addEventListener('fes-slack-response', handler);
+        window.dispatchEvent(new CustomEvent('fes-slack-request', {
+            detail: { reqId, type: 'SLACK_POST', method, body, token: SLACK_TOKEN }
+        }));
+
+        // Safety timeout — 15s
+        setTimeout(() => {
+            window.removeEventListener('fes-slack-response', handler);
+            reject(new Error('Slack POST timeout: ' + method));
+        }, 15000);
+    });
+}
+
+
+    function tryGetCurrentUser() {
+        return new Promise(resolve => {
+            const evId = '_fes_tc_u_' + Date.now();
+            window.addEventListener(evId, e => resolve(e.detail || 'Staff'), { once: true });
+            const s = document.createElement('script');
+            s.textContent = '(async()=>{let n="Staff";try{if(window.Clerk?.user){n=window.Clerk.user.fullName||window.Clerk.user.firstName||"Staff";}}catch{}window.dispatchEvent(new CustomEvent("' + evId + '",{detail:n}));})();';
+            document.head.appendChild(s); s.remove();
+        });
+    }
+
+    function fmtTime(ts) { if (!ts) return ''; return new Date(parseFloat(ts) * 1000).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }); }
+    function setStatus(msg, state) {
+        const el = document.getElementById('tc-status'), dot = document.getElementById('tc-dot');
+        if (el)  el.textContent  = msg;
+        if (dot) dot.style.background = state === 'ok' ? '#4ade80' : state === 'err' ? '#ef4444' : '#f59e0b';
+    }
+    function strip(html) { const d = document.createElement('div'); d.innerHTML = html || ''; return (d.textContent || '').trim(); }
+
+    async function showChannelPicker() {
+        const C = CONFIG;
+        const wrap = document.getElementById('tc-msg-wrap'); if (!wrap) return;
+        wrap.innerHTML = `<div style="display:flex;flex-direction:column;align-items:center;justify-content:center;height:100%;gap:16px;">
+            <div style="font-size:14px;font-weight:600;color:${C.text.primary};">Pick a Slack channel for Team Chat</div>
+            <div id="tc-chan-list" style="display:flex;flex-direction:column;gap:6px;min-width:320px;max-height:360px;overflow-y:auto;"></div>
+            <div id="tc-chan-status" style="font-size:12px;color:${C.text.muted};">Loading channels…</div>
+        </div>`;
+        setStatus('Choose a channel…', null);
+        try {
+            const data = await slackGet('conversations.list', { limit: 200, types: 'public_channel,private_channel' });
+            if (!data.ok) { document.getElementById('tc-chan-status').textContent = '❌ ' + (data.error || 'Slack error'); return; }
+            const chans = (data.channels || []).filter(c => c.is_member);
+            document.getElementById('tc-chan-status').textContent = chans.length ? 'Select one:' : 'Bot is not in any channels.';
+            const list = document.getElementById('tc-chan-list');
+            chans.forEach(ch => {
+                const btn = document.createElement('button');
+                btn.textContent = '#' + ch.name;
+                btn.style.cssText = `padding:10px 16px;background:${C.buttons.background};border:1px solid ${C.buttons.border};border-radius:${C.buttons.borderRadius};color:${C.text.primary};font-size:13px;font-family:${C.font.family};cursor:pointer;text-align:left;transition:all 0.15s;`;
+                btn.addEventListener('mouseenter', () => { btn.style.background = C.buttons.backgroundHover; btn.style.borderColor = C.buttons.borderHover; });
+                btn.addEventListener('mouseleave', () => { btn.style.background = C.buttons.background; btn.style.borderColor = C.buttons.border; });
+                btn.addEventListener('click', () => {
+                    CHANNEL_ID = ch.id; saveChannel(ch.id);
+                    wrap.innerHTML = '<div id="tc-spinner" style="display:flex;align-items:center;justify-content:center;height:200px;color:' + C.emptyState.color + ';font-size:13px;">Loading messages…</div>';
+                    renderedTs.clear(); lastTs = null; isLoaded = false;
+                    initialLoad().then(() => { if (isLoaded) startPoll(); });
+                });
+                list.appendChild(btn);
+            });
+        } catch (e) { document.getElementById('tc-chan-status').textContent = '❌ ' + e.message; }
+    }
+
+    function makeMsg(msg) {
+        const C = CONFIG;
+        const name = msg.username || msg.user || 'Staff';
+        const text = (msg.text || '')
+            .replace(/&amp;/g, '&').replace(/&lt;/g, '<').replace(/&gt;/g, '>')
+            .replace(/\*([^*]+)\*:/g, '<strong>$1</strong>:')
+            .replace(/\n/g, '<br>');
+        const initial = (name[0] || '?').toUpperCase();
+        const time    = fmtTime(msg.ts);
+        const isSelf  = name === currentUser || (msg.text || '').startsWith('*' + currentUser + ':*');
+        const avatarBg = isSelf ? 'rgba(180,30,30,0.30)' : 'rgba(100,80,60,0.28)';
+        const row = document.createElement('div');
+        row.dataset.ts = msg.ts;
+        row.style.cssText = 'display:flex;align-items:flex-start;gap:10px;padding:5px 0;';
+        row.innerHTML = `
+            <div style="width:32px;height:32px;border-radius:9999px;background:${avatarBg};display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;color:${C.text.primary};flex-shrink:0;">${initial}</div>
+            <div style="flex:1;min-width:0;">
+                <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:3px;">
+                    <span style="font-size:13px;font-weight:600;color:${isSelf ? C.tabs.activeColor : C.text.primary};">${name}${isSelf ? ' <span style="font-size:10px;font-weight:400;opacity:0.45;">(you)</span>' : ''}</span>
+                    <span style="font-size:10px;color:${C.text.veryMuted};">${time}</span>
+                </div>
+                <div style="font-size:13px;color:${C.text.secondary};line-height:1.5;word-break:break-word;">${text || '<em style="opacity:0.4">(empty)</em>'}</div>
+            </div>`;
+        return row;
+    }
+
+    function appendMsgs(msgs, prepend) {
+        const wrap = document.getElementById('tc-msg-wrap'); if (!wrap) return;
+        document.getElementById('tc-spinner')?.remove();
+        const frag = document.createDocumentFragment();
+        msgs.forEach(m => {
+            if (renderedTs.has(m.ts)) return;
+            renderedTs.add(m.ts);
+            frag.appendChild(makeMsg(m));
+        });
+        if (prepend) wrap.insertBefore(frag, wrap.firstChild);
+        else { wrap.appendChild(frag); wrap.scrollTop = wrap.scrollHeight; }
+    }
+
+    async function initialLoad() {
+        if (!CHANNEL_ID) {
+            const targetName = CONFIG.slack.channelName;
+            if (targetName) {
+                setStatus('Looking up #' + targetName + '…', null);
+                try {
+                    const list = await slackGet('conversations.list', { limit: 200, types: 'public_channel,private_channel' });
+                    if (list.ok) {
+                        const found = (list.channels || []).find(c => c.name === targetName && c.is_member);
+                        if (found) { CHANNEL_ID = found.id; saveChannel(found.id); }
+                        else { setStatus('❌ Bot is not in #' + targetName + ' — invite it first.', 'err'); return; }
+                    } else { setStatus('❌ ' + (list.error || 'Slack error'), 'err'); return; }
+                } catch (e) { setStatus('❌ ' + e.message, 'err'); return; }
+            } else { await showChannelPicker(); return; }
+        }
+        setStatus('Loading…', null);
+        try {
+            const data = await slackGet('conversations.history', { channel: CHANNEL_ID, limit: 60 });
+            if (!data.ok) { setStatus('❌ ' + (data.error || 'Slack error'), 'err'); return; }
+            const msgs = (data.messages || []).reverse();
+            if (msgs.length) { appendMsgs(msgs, false); lastTs = msgs[msgs.length - 1].ts; }
+            else { const sp = document.getElementById('tc-spinner'); if (sp) sp.textContent = 'No messages yet — say hi!'; }
+            setStatus('#fes-team  ·  ' + msgs.length + ' message(s) loaded', 'ok');
+            isLoaded = true;
+        } catch (e) { setStatus('❌ ' + e.message, 'err'); }
+    }
+
+    async function poll() {
+        if (!lastTs || !CHANNEL_ID) return;
+        try {
+            const data = await slackGet('conversations.history', { channel: CHANNEL_ID, limit: 30, oldest: lastTs });
+            if (!data.ok) return;
+            const newMsgs = (data.messages || []).reverse().filter(m => parseFloat(m.ts) > parseFloat(lastTs));
+            if (newMsgs.length) {
+                appendMsgs(newMsgs, false);
+                lastTs = newMsgs[newMsgs.length - 1].ts;
+                setStatus('#fes-team  ·  updated ' + new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }), 'ok');
+            }
+        } catch {}
+    }
+
+    function startPoll() { if (pollTimer) clearInterval(pollTimer); pollTimer = setInterval(poll, POLL_MS); }
+
+    async function doSend() {
+        const editor = document.getElementById('tc-editor'), sendBtn = document.getElementById('tc-btn-send');
+        const text = (editor?.textContent || '').trim();
+        if (!text || !CHANNEL_ID) return;
+        sendBtn.textContent = '…'; sendBtn.disabled = true; editor.contentEditable = 'false';
+        try {
+            const res = await slackPost('chat.postMessage', { channel: CHANNEL_ID, text: '*' + currentUser + ':* ' + text, username: currentUser });
+            if (res.ok) { editor.textContent = ''; await poll(); }
+            else { setStatus('❌ Send failed: ' + (res.error || 'unknown'), 'err'); }
+        } catch (e) { setStatus('❌ ' + e.message, 'err'); }
+        editor.contentEditable = 'true'; sendBtn.textContent = 'Send'; sendBtn.disabled = false; editor.focus();
+    }
+
+    function openPanel() {
+        const panel = document.getElementById('fes-team-chat-panel'); if (!panel) return;
+        panel.style.display = 'flex'; panel.style.flexDirection = 'column';
+        if (!isLoaded) { initialLoad().then(() => { if (isLoaded) startPoll(); }); }
+        else { if (!pollTimer) startPoll(); }
+    }
+    function closePanel() {
+        const panel = document.getElementById('fes-team-chat-panel');
+        if (panel) panel.style.display = 'none';
+        if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+    }
+
+    function buildPanel() {
+        if (document.getElementById('fes-team-chat-panel')) return;
+        const C = CONFIG;
+        const panel = document.createElement('div');
+        panel.id = 'fes-team-chat-panel';
+        Object.assign(panel.style, {
+            position: 'fixed', inset: '0', zIndex: '200001',
+            fontFamily: C.font.family, background: 'rgba(8,6,4,0.97)',
+            backdropFilter: 'blur(14px)', display: 'none', flexDirection: 'column',
+        });
+        panel.innerHTML = `
+        <div style="display:flex;align-items:center;gap:10px;padding:12px 20px;background:${C.navbar.background};border-bottom:1px solid ${C.navbar.border};flex-shrink:0;">
+            <span style="font-size:15px;font-weight:700;color:${C.text.primary};">💬 Team Chat</span>
+            <div id="tc-dot" style="width:8px;height:8px;border-radius:9999px;background:#f59e0b;flex-shrink:0;transition:background 0.4s;animation:fes-pulse 2s infinite;"></div>
+            <span id="tc-status" style="font-size:12px;color:${C.text.muted};flex:1;">Connecting…</span>
+            <button id="tc-change-chan" style="padding:5px 10px;background:transparent;border:1px solid rgba(255,255,255,0.10);border-radius:6px;color:${C.text.veryMuted};font-size:11px;cursor:pointer;font-family:inherit;">⚙ Switch channel</button>
+            <button id="tc-close" style="padding:6px 14px;background:transparent;border:1px solid rgba(255,255,255,0.10);border-radius:6px;color:${C.text.muted};font-size:12px;cursor:pointer;font-family:inherit;">✕ Close</button>
+        </div>
+        <div id="tc-msg-wrap" class="fes-scroll" style="flex:1;overflow-y:auto;padding:16px 40px 12px;display:flex;flex-direction:column;gap:2px;max-width:800px;width:100%;margin:0 auto;align-self:stretch;">
+            <div id="tc-spinner" style="display:flex;align-items:center;justify-content:center;height:200px;color:${C.emptyState.color};font-size:13px;">Loading…</div>
+        </div>
+        <div style="border-top:1px solid ${C.dividers.color};background:${C.chat.inputBackground};padding:12px 40px;display:flex;gap:10px;align-items:flex-end;max-width:800px;width:100%;align-self:center;box-sizing:border-box;">
+            <div id="tc-editor" contenteditable="true" data-ph="Message the team… (Enter to send)"
+                 style="flex:1;min-height:38px;max-height:120px;overflow-y:auto;padding:8px 12px;background:rgba(255,255,255,0.06);border:1px solid ${C.chat.inputBorder};border-radius:10px;color:${C.text.primary};font-size:13px;font-family:inherit;outline:none;line-height:1.5;word-wrap:break-word;"></div>
+            <button id="tc-btn-send" style="padding:10px 20px;background:${C.sendButton.background};border:none;border-radius:${C.sendButton.borderRadius};color:${C.sendButton.color};cursor:pointer;font-size:13px;font-weight:600;font-family:inherit;flex-shrink:0;transition:background 0.15s;">Send</button>
+        </div>
+        <div style="text-align:center;font-size:10px;color:${C.text.veryMuted};padding:4px 0 8px;">Enter to send · Shift+Enter for new line</div>`;
+        document.body.appendChild(panel);
+        const st = document.createElement('style');
+        st.textContent = '#tc-editor:empty:before{content:attr(data-ph);color:' + C.chat.inputPlaceholder + ';pointer-events:none;}';
+        document.head.appendChild(st);
+        const editor = document.getElementById('tc-editor'), sendBtn = document.getElementById('tc-btn-send');
+        editor.addEventListener('focus',   () => { editor.style.borderColor = C.chat.inputFocusBorder; });
+        editor.addEventListener('blur',    () => { editor.style.borderColor = C.chat.inputBorder; });
+        editor.addEventListener('keydown', e  => { if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); doSend(); } });
+        sendBtn.addEventListener('mouseenter', () => { sendBtn.style.background = C.sendButton.backgroundHover; });
+        sendBtn.addEventListener('mouseleave', () => { sendBtn.style.background = C.sendButton.background; });
+        sendBtn.addEventListener('click', doSend);
+        document.getElementById('tc-close').addEventListener('click', closePanel);
+        document.getElementById('tc-change-chan').addEventListener('click', () => {
+            CHANNEL_ID = ''; renderedTs.clear(); lastTs = null; isLoaded = false;
+            if (pollTimer) { clearInterval(pollTimer); pollTimer = null; }
+            document.getElementById('tc-msg-wrap').innerHTML = '<div id="tc-spinner" style="display:flex;align-items:center;justify-content:center;height:200px;color:' + C.emptyState.color + ';font-size:13px;">Loading…</div>';
+            showChannelPicker();
+        });
+    }
+
+    // Expose functions
+    window.__fesTeamOpen  = openPanel;
+    window.__fesTeamClose = closePanel;
+    // [FIX] Allow lazy build from button handler
+    window.__fesTeamBuild = () => { buildPanel(); CHANNEL_ID = getSavedChannel(); tryGetCurrentUser().then(n => { currentUser = n || 'Staff'; }); };
+
+    // [FIX] Build the panel as soon as CONFIG is available — no fes-navbar dependency
+    function tryInit() {
+        if (!CONFIG) { setTimeout(tryInit, 300); return; }
+        CHANNEL_ID = getSavedChannel();
+        buildPanel();
+        tryGetCurrentUser().then(name => { currentUser = name || 'Staff'; });
+        console.log('[FES Team Chat] ✅ Panel ready');
+    }
+    // Run immediately (CONFIG is already defined at this point in the script)
+    tryInit();
+})();
